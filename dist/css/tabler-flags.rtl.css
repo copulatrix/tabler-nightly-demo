@@ -15,8 +15,8 @@
   background-repeat: no-repeat;
   background-position: center;
   background-size: cover;
-  border: 1px solid var(--tblr-border-color);
-  border-radius: 3px; }
+  border: var(--tblr-border-size) solid var(--tblr-border-color);
+  border-radius: var(--tblr-border-radius); }
 
 .flag-country-ad {
   background-image: url("../img/flags/ad.svg"); }

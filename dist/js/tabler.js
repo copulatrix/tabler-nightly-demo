@@ -8291,6 +8291,28 @@
 	  return new Toast(toastTriggerEl);
 	});
 
+	var prefix = 'tblr-';
+	var hexToRgba = function hexToRgba(hex, opacity) {
+	  var result = /^#?([a-f\d]{2})([a-f\d]{2})([a-f\d]{2})$/i.exec(hex);
+	  return result ? "rgba(".concat(parseInt(result[1], 16), ", ").concat(parseInt(result[2], 16), ", ").concat(parseInt(result[3], 16), ", ").concat(opacity, ")") : null;
+	};
+	var getColor = function getColor(color) {
+	  var opacity = arguments.length > 1 && arguments[1] !== undefined ? arguments[1] : 1;
+	  var c = getComputedStyle(document.documentElement).getPropertyValue("--".concat(prefix).concat(color)).trim();
+	  if (opacity !== 1) {
+	    return hexToRgba(c, opacity);
+	  }
+	  return c;
+	};
+
+	var tabler = /*#__PURE__*/Object.freeze({
+		__proto__: null,
+		prefix: prefix,
+		hexToRgba: hexToRgba,
+		getColor: getColor
+	});
+
 	window.bootstrap = bootstrap;
+	window.tabler = tabler;
 
 }));
