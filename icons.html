@@ -22,7 +22,7 @@
     <style>
       @import url('https://rsms.me/inter/inter.css');
       :root {
-      	--tblr-font-sans-serif: Inter,-apple-system,BlinkMacSystemFont,San Francisco,Segoe UI,Roboto,Helvetica Neue,sans-serif;
+      	--tblr-font-sans-serif: Inter, -apple-system, BlinkMacSystemFont, San Francisco, Segoe UI, Roboto, Helvetica Neue, sans-serif;
       }
     </style>
   </head>
@@ -55,11 +55,13 @@
               </div>
             </div>
             <div class="d-none d-md-flex">
-              <a href="?theme=dark" class="nav-link px-0 hide-theme-dark" title="Enable dark mode" data-bs-toggle="tooltip" data-bs-placement="bottom">
+              <a href="?theme=dark" class="nav-link px-0 hide-theme-dark" title="Enable dark mode" data-bs-toggle="tooltip"
+		   data-bs-placement="bottom">
                 <!-- Download SVG icon from http://tabler-icons.io/i/moon -->
                 <svg xmlns="http://www.w3.org/2000/svg" class="icon" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round"><path stroke="none" d="M0 0h24v24H0z" fill="none"/><path d="M12 3c.132 0 .263 0 .393 0a7.5 7.5 0 0 0 7.92 12.446a9 9 0 1 1 -8.313 -12.454z" /></svg>
               </a>
-              <a href="?theme=light" class="nav-link px-0 hide-theme-light" title="Enable light mode" data-bs-toggle="tooltip" data-bs-placement="bottom">
+              <a href="?theme=light" class="nav-link px-0 hide-theme-light" title="Enable light mode" data-bs-toggle="tooltip"
+		   data-bs-placement="bottom">
                 <!-- Download SVG icon from http://tabler-icons.io/i/sun -->
                 <svg xmlns="http://www.w3.org/2000/svg" class="icon" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round"><path stroke="none" d="M0 0h24v24H0z" fill="none"/><circle cx="12" cy="12" r="4" /><path d="M3 12h1m8 -9v1m8 8h1m-9 8v1m-6.4 -15.4l.7 .7m12.1 -.7l-.7 .7m0 11.4l.7 .7m-12.1 -.7l-.7 .7" /></svg>
               </a>
@@ -157,12 +159,12 @@
                 </div>
               </a>
               <div class="dropdown-menu dropdown-menu-end dropdown-menu-arrow">
-                <a href="#" class="dropdown-item">Set status</a>
-                <a href="#" class="dropdown-item">Profile & account</a>
+                <a href="#" class="dropdown-item">Status</a>
+                <a href="#" class="dropdown-item">Profile</a>
                 <a href="#" class="dropdown-item">Feedback</a>
                 <div class="dropdown-divider"></div>
-                <a href="#" class="dropdown-item">Settings</a>
-                <a href="#" class="dropdown-item">Logout</a>
+                <a href="./settings.html" class="dropdown-item">Settings</a>
+                <a href="./sign-in.html" class="dropdown-item">Logout</a>
               </div>
             </div>
           </div>
@@ -312,6 +314,9 @@
                           <div class="dropdown-menu">
                             <a href="./sign-in.html" class="dropdown-item">
                               Sign in
+                            </a>
+                            <a href="./sign-in-illustration.html" class="dropdown-item">
+                              Sign in with illustration
                             </a>
                             <a href="./sign-up.html" class="dropdown-item">
                               Sign up
@@ -493,7 +498,7 @@
                       <svg xmlns="http://www.w3.org/2000/svg" class="icon" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round"><path stroke="none" d="M0 0h24v24H0z" fill="none"/><path d="M5 11a7 7 0 0 1 14 0v7a1.78 1.78 0 0 1 -3.1 1.4a1.65 1.65 0 0 0 -2.6 0a1.65 1.65 0 0 1 -2.6 0a1.65 1.65 0 0 0 -2.6 0a1.78 1.78 0 0 1 -3.1 -1.4v-7" /><line x1="10" y1="10" x2="10.01" y2="10" /><line x1="14" y1="10" x2="14.01" y2="10" /><path d="M10 14a3.5 3.5 0 0 0 4 0" /></svg>
                     </span>
                     <span class="nav-link-title">
-                      2410 icons
+                      2446 icons
                     </span>
                   </a>
                 </li>
@@ -525,7 +530,7 @@
                 </li>
               </ul>
               <div class="my-2 my-md-0 flex-grow-1 flex-md-grow-0 order-first order-md-last">
-                <form action="." method="get">
+                <form action="./" method="get" autocomplete="off" novalidate>
                   <div class="input-icon">
                     <span class="input-icon-addon">
                       <!-- Download SVG icon from http://tabler-icons.io/i/search -->
@@ -570,7 +575,7 @@
                         <div class="markdown text-muted">
                           All icons come from the Tabler Icons set and are MIT-licensed. Visit
                           <a href="https://tabler-icons.io" target="_blank" rel="noopener">tabler-icons.io</a>,
-                          download any of the 2410 icons in SVG, PNG or&nbsp;React and use them in your favourite design tools.
+                          download any of the 2446 icons in SVG, PNG or&nbsp;React and use them in your favourite design tools.
                         </div>
                         <div class="mt-3">
                           <a href="https://tabler-icons.io" class="btn btn-primary" target="_blank" rel="noopener">Download icons</a>
@@ -676,6 +681,10 @@
                           <!-- Download SVG icon from http://tabler-icons.io/i/affiliate -->
                           <svg xmlns="http://www.w3.org/2000/svg" class="icon" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round"><path stroke="none" d="M0 0h24v24H0z" fill="none"/><path d="M5.931 6.936l1.275 4.249m5.607 5.609l4.251 1.275" /><path d="M11.683 12.317l5.759 -5.759" /><circle cx="5.5" cy="5.5" r="1.5" /><circle cx="18.5" cy="5.5" r="1.5" /><circle cx="18.5" cy="18.5" r="1.5" /><circle cx="8.5" cy="15.5" r="4.5" /></svg>
                         </a>
+                        <a href="https://tabler-icons.io/i/air-conditioning" target="_blank" rel="noopener" class="demo-icons-list-item" title="air-conditioning" data-bs-toggle="tooltip" data-bs-placement="top">
+                          <!-- Download SVG icon from http://tabler-icons.io/i/air-conditioning -->
+                          <svg xmlns="http://www.w3.org/2000/svg" class="icon" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round"><path stroke="none" d="M0 0h24v24H0z" fill="none"/><path d="M8 16a3 3 0 0 1 -3 3" /><path d="M16 16a3 3 0 0 0 3 3" /><path d="M12 16v4" /><rect x="3" y="5" width="18" height="8" rx="2" /><path d="M7 13v-3a1 1 0 0 1 1 -1h8a1 1 0 0 1 1 1v3" /></svg>
+                        </a>
                         <a href="https://tabler-icons.io/i/alarm-off" target="_blank" rel="noopener" class="demo-icons-list-item" title="alarm-off" data-bs-toggle="tooltip" data-bs-placement="top">
                           <!-- Download SVG icon from http://tabler-icons.io/i/alarm-off -->
                           <svg xmlns="http://www.w3.org/2000/svg" class="icon" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round"><path stroke="none" d="M0 0h24v24H0z" fill="none"/><path d="M7.587 7.566a7 7 0 1 0 9.833 9.864m1.35 -2.645a7 7 0 0 0 -8.536 -8.56" /><path d="M12 12v1h1" /><path d="M5.261 5.265l-1.011 .735" /><path d="M17 4l2.75 2" /><path d="M3 3l18 18" /></svg>
@@ -739,6 +748,10 @@
                         <a href="https://tabler-icons.io/i/ampersand" target="_blank" rel="noopener" class="demo-icons-list-item" title="ampersand" data-bs-toggle="tooltip" data-bs-placement="top">
                           <!-- Download SVG icon from http://tabler-icons.io/i/ampersand -->
                           <svg xmlns="http://www.w3.org/2000/svg" class="icon" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round"><path stroke="none" d="M0 0h24v24H0z" fill="none"/><path d="M19 20l-10.403 -10.972a2.948 2.948 0 0 1 0 -4.165a2.94 2.94 0 0 1 4.161 0a2.948 2.948 0 0 1 0 4.165l-4.68 4.687a3.685 3.685 0 0 0 0 5.207a3.675 3.675 0 0 0 5.2 0l5.722 -5.922" /></svg>
+                        </a>
+                        <a href="https://tabler-icons.io/i/analyze" target="_blank" rel="noopener" class="demo-icons-list-item" title="analyze" data-bs-toggle="tooltip" data-bs-placement="top">
+                          <!-- Download SVG icon from http://tabler-icons.io/i/analyze -->
+                          <svg xmlns="http://www.w3.org/2000/svg" class="icon" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round"><path stroke="none" d="M0 0h24v24H0z" fill="none"/><path d="M20 11a8.1 8.1 0 0 0 -6.986 -6.918a8.095 8.095 0 0 0 -8.019 3.918" /><path d="M4 13a8.1 8.1 0 0 0 15.001 2.998" /><circle cx="19" cy="16" r="1" /><circle cx="5" cy="8" r="1" /><circle cx="12" cy="12" r="3" /></svg>
                         </a>
                         <a href="https://tabler-icons.io/i/anchor-off" target="_blank" rel="noopener" class="demo-icons-list-item" title="anchor-off" data-bs-toggle="tooltip" data-bs-placement="top">
                           <!-- Download SVG icon from http://tabler-icons.io/i/anchor-off -->
@@ -983,6 +996,10 @@
                         <a href="https://tabler-icons.io/i/arrow-bottom-tail" target="_blank" rel="noopener" class="demo-icons-list-item" title="arrow-bottom-tail" data-bs-toggle="tooltip" data-bs-placement="top">
                           <!-- Download SVG icon from http://tabler-icons.io/i/arrow-bottom-tail -->
                           <svg xmlns="http://www.w3.org/2000/svg" class="icon" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round"><path stroke="none" d="M0 0h24v24H0z" fill="none"/><path d="M12 6v15" /><path d="M9 18l3 3l3 -3" /><path d="M9 3l3 3l3 -3" /></svg>
+                        </a>
+                        <a href="https://tabler-icons.io/i/arrow-bounce" target="_blank" rel="noopener" class="demo-icons-list-item" title="arrow-bounce" data-bs-toggle="tooltip" data-bs-placement="top">
+                          <!-- Download SVG icon from http://tabler-icons.io/i/arrow-bounce -->
+                          <svg xmlns="http://www.w3.org/2000/svg" class="icon" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round"><path stroke="none" d="M0 0h24v24H0z" fill="none"/><path d="M10 18h4" /><path d="M3 8a9 9 0 0 1 9 9v1l1.428 -4.285a12 12 0 0 1 6.018 -6.938l.554 -.277" /><path d="M15 6h5v5" /></svg>
                         </a>
                         <a href="https://tabler-icons.io/i/arrow-curve-left" target="_blank" rel="noopener" class="demo-icons-list-item" title="arrow-curve-left" data-bs-toggle="tooltip" data-bs-placement="top">
                           <!-- Download SVG icon from http://tabler-icons.io/i/arrow-curve-left -->
@@ -1544,6 +1561,10 @@
                           <!-- Download SVG icon from http://tabler-icons.io/i/badges -->
                           <svg xmlns="http://www.w3.org/2000/svg" class="icon" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round"><path stroke="none" d="M0 0h24v24H0z" fill="none"/><path d="M17 17v-4l-5 3l-5 -3v4l5 3z" /><path d="M17 8v-4l-5 3l-5 -3v4l5 3z" /></svg>
                         </a>
+                        <a href="https://tabler-icons.io/i/baguette" target="_blank" rel="noopener" class="demo-icons-list-item" title="baguette" data-bs-toggle="tooltip" data-bs-placement="top">
+                          <!-- Download SVG icon from http://tabler-icons.io/i/baguette -->
+                          <svg xmlns="http://www.w3.org/2000/svg" class="icon" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round"><path stroke="none" d="M0 0h24v24H0z" fill="none"/><path d="M5.628 11.283l5.644 -5.637c2.665 -2.663 5.924 -3.747 8.663 -1.205l.188 .181a2.987 2.987 0 0 1 0 4.228l-11.287 11.274a2.996 2.996 0 0 1 -4.089 .135l-.143 -.135c-2.728 -2.724 -1.704 -6.117 1.024 -8.841z" /><path d="M9.5 7.5l1.5 3.5" /><path d="M6.5 10.5l1.5 3.5" /><path d="M12.5 4.5l1.5 3.5" /></svg>
+                        </a>
                         <a href="https://tabler-icons.io/i/ball-american-football" target="_blank" rel="noopener" class="demo-icons-list-item" title="ball-american-football" data-bs-toggle="tooltip" data-bs-placement="top">
                           <!-- Download SVG icon from http://tabler-icons.io/i/ball-american-football -->
                           <svg xmlns="http://www.w3.org/2000/svg" class="icon" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round"><path stroke="none" d="M0 0h24v24H0z" fill="none"/><line x1="15" y1="9" x2="9" y2="15" /><line x1="10" y1="12" x2="12" y2="14" /><line x1="12" y1="10" x2="14" y2="12" /><path d="M8 21a5 5 0 0 0 -5 -5" /><path d="M16 3c-7.18 0 -13 5.82 -13 13a5 5 0 0 0 5 5c7.18 0 13 -5.82 13 -13a5 5 0 0 0 -5 -5" /><path d="M16 3a5 5 0 0 0 5 5" /></svg>
@@ -1820,6 +1841,10 @@
                           <!-- Download SVG icon from http://tabler-icons.io/i/blur -->
                           <svg xmlns="http://www.w3.org/2000/svg" class="icon" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round"><path stroke="none" d="M0 0h24v24H0z" fill="none"/><path d="M12 21a9.01 9.01 0 0 0 2.32 -.302a9.004 9.004 0 0 0 1.74 -16.733a9 9 0 1 0 -4.06 17.035z" /><path d="M12 3v17" /><path d="M12 12h9" /><path d="M12 9h8" /><path d="M12 6h6" /><path d="M12 18h6" /><path d="M12 15h8" /></svg>
                         </a>
+                        <a href="https://tabler-icons.io/i/bmp" target="_blank" rel="noopener" class="demo-icons-list-item" title="bmp" data-bs-toggle="tooltip" data-bs-placement="top">
+                          <!-- Download SVG icon from http://tabler-icons.io/i/bmp -->
+                          <svg xmlns="http://www.w3.org/2000/svg" class="icon" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round"><path stroke="none" d="M0 0h24v24H0z" fill="none"/><path d="M18 16v-8h2a2 2 0 1 1 0 4h-2" /><path d="M6 14a2 2 0 0 1 -2 2h-2v-8h2a2 2 0 1 1 0 4h-2h2a2 2 0 0 1 2 2z" /><path d="M9 16v-8l3 6l3 -6v8" /></svg>
+                        </a>
                         <a href="https://tabler-icons.io/i/bold-off" target="_blank" rel="noopener" class="demo-icons-list-item" title="bold-off" data-bs-toggle="tooltip" data-bs-placement="top">
                           <!-- Download SVG icon from http://tabler-icons.io/i/bold-off -->
                           <svg xmlns="http://www.w3.org/2000/svg" class="icon" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round"><path stroke="none" d="M0 0h24v24H0z" fill="none"/><path d="M9 5h4a3.5 3.5 0 0 1 2.222 6.204m-3.222 .796h-5v-5" /><path d="M17.107 17.112a3.5 3.5 0 0 1 -3.107 1.888h-7v-7" /><path d="M3 3l18 18" /></svg>
@@ -1843,6 +1868,10 @@
                         <a href="https://tabler-icons.io/i/bone" target="_blank" rel="noopener" class="demo-icons-list-item" title="bone" data-bs-toggle="tooltip" data-bs-placement="top">
                           <!-- Download SVG icon from http://tabler-icons.io/i/bone -->
                           <svg xmlns="http://www.w3.org/2000/svg" class="icon" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round"><path stroke="none" d="M0 0h24v24H0z" fill="none"/><path d="M15 3a3 3 0 0 1 3 3a3 3 0 1 1 -2.12 5.122l-4.758 4.758a3 3 0 1 1 -5.117 2.297l-.005 -.177l-.176 -.005a3 3 0 1 1 2.298 -5.115l4.758 -4.758a3 3 0 0 1 2.12 -5.122z" /></svg>
+                        </a>
+                        <a href="https://tabler-icons.io/i/bong" target="_blank" rel="noopener" class="demo-icons-list-item" title="bong" data-bs-toggle="tooltip" data-bs-placement="top">
+                          <!-- Download SVG icon from http://tabler-icons.io/i/bong -->
+                          <svg xmlns="http://www.w3.org/2000/svg" class="icon" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round"><path stroke="none" d="M0 0h24v24H0z" fill="none"/><path d="M13 3v8.416c.134 .059 .265 .123 .393 .193l3.607 -3.609l2 2l-3.608 3.608a5 5 0 1 1 -6.392 -2.192v-8.416h4z" /><path d="M8 3h6" /><path d="M6.1 17h9.8" /></svg>
                         </a>
                         <a href="https://tabler-icons.io/i/book-2" target="_blank" rel="noopener" class="demo-icons-list-item" title="book-2" data-bs-toggle="tooltip" data-bs-placement="top">
                           <!-- Download SVG icon from http://tabler-icons.io/i/book-2 -->
@@ -4516,6 +4545,10 @@
                           <!-- Download SVG icon from http://tabler-icons.io/i/fingerprint -->
                           <svg xmlns="http://www.w3.org/2000/svg" class="icon" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round"><path stroke="none" d="M0 0h24v24H0z" fill="none"/><path d="M18.9 7a8 8 0 0 1 1.1 5v1a6 6 0 0 0 .8 3" /><path d="M8 11a4 4 0 0 1 8 0v1a10 10 0 0 0 2 6" /><path d="M12 11v2a14 14 0 0 0 2.5 8" /><path d="M8 15a18 18 0 0 0 1.8 6" /><path d="M4.9 19a22 22 0 0 1 -.9 -7v-1a8 8 0 0 1 12 -6.95" /></svg>
                         </a>
+                        <a href="https://tabler-icons.io/i/fire-hydrant" target="_blank" rel="noopener" class="demo-icons-list-item" title="fire-hydrant" data-bs-toggle="tooltip" data-bs-placement="top">
+                          <!-- Download SVG icon from http://tabler-icons.io/i/fire-hydrant -->
+                          <svg xmlns="http://www.w3.org/2000/svg" class="icon" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round"><path stroke="none" d="M0 0h24v24H0z" fill="none"/><path d="M5 21h14" /><path d="M17 21v-5h1a1 1 0 0 0 1 -1v-2a1 1 0 0 0 -1 -1h-1v-4a5 5 0 0 0 -10 0v4h-1a1 1 0 0 0 -1 1v2a1 1 0 0 0 1 1h1v5" /><circle cx="12" cy="14" r="2" /><path d="M6 8h12" /></svg>
+                        </a>
                         <a href="https://tabler-icons.io/i/firetruck" target="_blank" rel="noopener" class="demo-icons-list-item" title="firetruck" data-bs-toggle="tooltip" data-bs-placement="top">
                           <!-- Download SVG icon from http://tabler-icons.io/i/firetruck -->
                           <svg xmlns="http://www.w3.org/2000/svg" class="icon" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round"><path stroke="none" d="M0 0h24v24H0z" fill="none"/><circle cx="5" cy="17" r="2" /><circle cx="17" cy="17" r="2" /><path d="M7 18h8m4 0h2v-6a5 5 0 0 0 -5 -5h-1l1.5 5h4.5" /><path d="M12 18v-11h3" /><polyline points="3 17 3 12 12 12" /><line x1="3" y1="9" x2="21" y2="3" /><line x1="6" y1="12" x2="6" y2="8" /></svg>
@@ -4832,6 +4865,10 @@
                           <!-- Download SVG icon from http://tabler-icons.io/i/gif -->
                           <svg xmlns="http://www.w3.org/2000/svg" class="icon" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round"><path stroke="none" d="M0 0h24v24H0z" fill="none"/><path d="M8 8h-3a2 2 0 0 0 -2 2v4a2 2 0 0 0 2 2h3v-4h-1" /><path d="M12 8v8" /><path d="M16 16v-8h5" /><path d="M20 12h-4" /></svg>
                         </a>
+                        <a href="https://tabler-icons.io/i/gift-card" target="_blank" rel="noopener" class="demo-icons-list-item" title="gift-card" data-bs-toggle="tooltip" data-bs-placement="top">
+                          <!-- Download SVG icon from http://tabler-icons.io/i/gift-card -->
+                          <svg xmlns="http://www.w3.org/2000/svg" class="icon" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round"><path stroke="none" d="M0 0h24v24H0z" fill="none"/><rect x="3" y="5" width="18" height="14" rx="3" /><path d="M7 16l3 -3l3 3" /><path d="M8 13c-.789 0 -2 -.672 -2 -1.5s.711 -1.5 1.5 -1.5c1.128 -.02 2.077 1.17 2.5 3c.423 -1.83 1.372 -3.02 2.5 -3c.789 0 1.5 .672 1.5 1.5s-1.211 1.5 -2 1.5h-4z" /></svg>
+                        </a>
                         <a href="https://tabler-icons.io/i/gift" target="_blank" rel="noopener" class="demo-icons-list-item" title="gift" data-bs-toggle="tooltip" data-bs-placement="top">
                           <!-- Download SVG icon from http://tabler-icons.io/i/gift -->
                           <svg xmlns="http://www.w3.org/2000/svg" class="icon" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round"><path stroke="none" d="M0 0h24v24H0z" fill="none"/><rect x="3" y="8" width="18" height="4" rx="1" /><line x1="12" y1="8" x2="12" y2="21" /><path d="M19 12v7a2 2 0 0 1 -2 2h-10a2 2 0 0 1 -2 -2v-7" /><path d="M7.5 8a2.5 2.5 0 0 1 0 -5a4.8 8 0 0 1 4.5 5a4.8 8 0 0 1 4.5 -5a2.5 2.5 0 0 1 0 5" /></svg>
@@ -4903,6 +4940,10 @@
                         <a href="https://tabler-icons.io/i/gps" target="_blank" rel="noopener" class="demo-icons-list-item" title="gps" data-bs-toggle="tooltip" data-bs-placement="top">
                           <!-- Download SVG icon from http://tabler-icons.io/i/gps -->
                           <svg xmlns="http://www.w3.org/2000/svg" class="icon" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round"><path stroke="none" d="M0 0h24v24H0z" fill="none"/><circle cx="12" cy="12" r="9" /><path d="M12 17l-1 -4l-4 -1l9 -4z" /></svg>
+                        </a>
+                        <a href="https://tabler-icons.io/i/gradienter" target="_blank" rel="noopener" class="demo-icons-list-item" title="gradienter" data-bs-toggle="tooltip" data-bs-placement="top">
+                          <!-- Download SVG icon from http://tabler-icons.io/i/gradienter -->
+                          <svg xmlns="http://www.w3.org/2000/svg" class="icon" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round"><path stroke="none" d="M0 0h24v24H0z" fill="none"/><path d="M3.227 14c.917 3.999 4.497 7 8.773 7c4.277 0 7.858 -3 8.773 -7" /><path d="M20.78 10a8.994 8.994 0 0 0 -8.78 -7a8.985 8.985 0 0 0 -8.782 7" /><circle cx="12" cy="12" r="2" /></svg>
                         </a>
                         <a href="https://tabler-icons.io/i/grain" target="_blank" rel="noopener" class="demo-icons-list-item" title="grain" data-bs-toggle="tooltip" data-bs-placement="top">
                           <!-- Download SVG icon from http://tabler-icons.io/i/grain -->
@@ -5411,6 +5452,10 @@
                         <a href="https://tabler-icons.io/i/jewish-star" target="_blank" rel="noopener" class="demo-icons-list-item" title="jewish-star" data-bs-toggle="tooltip" data-bs-placement="top">
                           <!-- Download SVG icon from http://tabler-icons.io/i/jewish-star -->
                           <svg xmlns="http://www.w3.org/2000/svg" class="icon" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round"><path stroke="none" d="M0 0h24v24H0z" fill="none"/><path d="M12 2l3 5h6l-3 5l3 5h-6l-3 5l-3 -5h-6l3 -5l-3 -5h6z" /></svg>
+                        </a>
+                        <a href="https://tabler-icons.io/i/jpg" target="_blank" rel="noopener" class="demo-icons-list-item" title="jpg" data-bs-toggle="tooltip" data-bs-placement="top">
+                          <!-- Download SVG icon from http://tabler-icons.io/i/jpg -->
+                          <svg xmlns="http://www.w3.org/2000/svg" class="icon" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round"><path stroke="none" d="M0 0h24v24H0z" fill="none"/><path d="M21 8h-2a2 2 0 0 0 -2 2v4a2 2 0 0 0 2 2h2v-4h-1" /><path d="M10 16v-8h2a2 2 0 1 1 0 4h-2" /><path d="M3 8h4v6a2 2 0 0 1 -2 2h-1.5a0.5 .5 0 0 1 -.5 -.5v-.5" /></svg>
                         </a>
                         <a href="https://tabler-icons.io/i/jump-rope" target="_blank" rel="noopener" class="demo-icons-list-item" title="jump-rope" data-bs-toggle="tooltip" data-bs-placement="top">
                           <!-- Download SVG icon from http://tabler-icons.io/i/jump-rope -->
@@ -7140,6 +7185,10 @@
                           <!-- Download SVG icon from http://tabler-icons.io/i/plus -->
                           <svg xmlns="http://www.w3.org/2000/svg" class="icon" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round"><path stroke="none" d="M0 0h24v24H0z" fill="none"/><line x1="12" y1="5" x2="12" y2="19" /><line x1="5" y1="12" x2="19" y2="12" /></svg>
                         </a>
+                        <a href="https://tabler-icons.io/i/png" target="_blank" rel="noopener" class="demo-icons-list-item" title="png" data-bs-toggle="tooltip" data-bs-placement="top">
+                          <!-- Download SVG icon from http://tabler-icons.io/i/png -->
+                          <svg xmlns="http://www.w3.org/2000/svg" class="icon" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round"><path stroke="none" d="M0 0h24v24H0z" fill="none"/><path d="M21 8h-2a2 2 0 0 0 -2 2v4a2 2 0 0 0 2 2h2v-4h-1" /><path d="M3 16v-8h2a2 2 0 1 1 0 4h-2" /><path d="M10 16v-8l4 8v-8" /></svg>
+                        </a>
                         <a href="https://tabler-icons.io/i/podium" target="_blank" rel="noopener" class="demo-icons-list-item" title="podium" data-bs-toggle="tooltip" data-bs-placement="top">
                           <!-- Download SVG icon from http://tabler-icons.io/i/podium -->
                           <svg xmlns="http://www.w3.org/2000/svg" class="icon" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round"><path stroke="none" d="M0 0h24v24H0z" fill="none"/><path d="M5 8h14l-.621 2.485a2 2 0 0 1 -1.94 1.515h-8.878a2 2 0 0 1 -1.94 -1.515l-.621 -2.485z" /><path d="M7 8v-2a3 3 0 0 1 3 -3" /><path d="M8 12l1 9" /><path d="M16 12l-1 9" /><path d="M7 21h10" /></svg>
@@ -7416,6 +7465,10 @@
                           <!-- Download SVG icon from http://tabler-icons.io/i/relation-one-to-one -->
                           <svg xmlns="http://www.w3.org/2000/svg" class="icon" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round"><path stroke="none" d="M0 0h24v24H0z" fill="none"/><rect x="3" y="5" width="18" height="14" rx="2" /><path d="M8 10h1v4" /><path d="M15 10h1v4" /><line x1="12" y1="10.5" x2="12" y2="10.51" /><line x1="12" y1="13.5" x2="12" y2="13.51" /></svg>
                         </a>
+                        <a href="https://tabler-icons.io/i/reload" target="_blank" rel="noopener" class="demo-icons-list-item" title="reload" data-bs-toggle="tooltip" data-bs-placement="top">
+                          <!-- Download SVG icon from http://tabler-icons.io/i/reload -->
+                          <svg xmlns="http://www.w3.org/2000/svg" class="icon" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round"><path stroke="none" d="M0 0h24v24H0z" fill="none"/><path d="M19.933 13.041a8 8 0 1 1 -9.925 -8.788c3.899 -1.002 7.935 1.007 9.425 4.747" /><path d="M20 4v5h-5" /></svg>
+                        </a>
                         <a href="https://tabler-icons.io/i/repeat-off" target="_blank" rel="noopener" class="demo-icons-list-item" title="repeat-off" data-bs-toggle="tooltip" data-bs-placement="top">
                           <!-- Download SVG icon from http://tabler-icons.io/i/repeat-off -->
                           <svg xmlns="http://www.w3.org/2000/svg" class="icon" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round"><path stroke="none" d="M0 0h24v24H0z" fill="none"/><path d="M4 12v-3c0 -1.336 .873 -2.468 2.08 -2.856m3.92 -.144h10m-3 -3l3 3l-3 3" /><path d="M20 12v3a3 3 0 0 1 -.133 .886m-1.99 1.984a3 3 0 0 1 -.877 .13h-13m3 3l-3 -3l3 -3" /><path d="M3 3l18 18" /></svg>
@@ -7691,6 +7744,10 @@
                         <a href="https://tabler-icons.io/i/scuba-mask" target="_blank" rel="noopener" class="demo-icons-list-item" title="scuba-mask" data-bs-toggle="tooltip" data-bs-placement="top">
                           <!-- Download SVG icon from http://tabler-icons.io/i/scuba-mask -->
                           <svg xmlns="http://www.w3.org/2000/svg" class="icon" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round"><path stroke="none" d="M0 0h24v24H0z" fill="none"/><path d="M4 7h12a1 1 0 0 1 1 1v4.5a2.5 2.5 0 0 1 -2.5 2.5h-.5a2 2 0 0 1 -2 -2a2 2 0 1 0 -4 0a2 2 0 0 1 -2 2h-.5a2.5 2.5 0 0 1 -2.5 -2.5v-4.5a1 1 0 0 1 1 -1z" /><path d="M10 17a2 2 0 0 0 2 2h3.5a5.5 5.5 0 0 0 5.5 -5.5v-9.5" /></svg>
+                        </a>
+                        <a href="https://tabler-icons.io/i/sdk" target="_blank" rel="noopener" class="demo-icons-list-item" title="sdk" data-bs-toggle="tooltip" data-bs-placement="top">
+                          <!-- Download SVG icon from http://tabler-icons.io/i/sdk -->
+                          <svg xmlns="http://www.w3.org/2000/svg" class="icon" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round"><path stroke="none" d="M0 0h24v24H0z" fill="none"/><path d="M7 8h-3a1 1 0 0 0 -1 1v2a1 1 0 0 0 1 1h2a1 1 0 0 1 1 1v2a1 1 0 0 1 -1 1h-3" /><path d="M17 8v8" /><path d="M21 8l-3 4l3 4" /><path d="M17 12h1" /><path d="M10 8v8h2a2 2 0 0 0 2 -2v-4a2 2 0 0 0 -2 -2h-2z" /></svg>
                         </a>
                         <a href="https://tabler-icons.io/i/search-off" target="_blank" rel="noopener" class="demo-icons-list-item" title="search-off" data-bs-toggle="tooltip" data-bs-placement="top">
                           <!-- Download SVG icon from http://tabler-icons.io/i/search-off -->
@@ -8263,6 +8320,10 @@
                         <a href="https://tabler-icons.io/i/stars" target="_blank" rel="noopener" class="demo-icons-list-item" title="stars" data-bs-toggle="tooltip" data-bs-placement="top">
                           <!-- Download SVG icon from http://tabler-icons.io/i/stars -->
                           <svg xmlns="http://www.w3.org/2000/svg" class="icon" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round"><path stroke="none" d="M0 0h24v24H0z" fill="none"/><path d="M17.8 19.817l-2.172 1.138a0.392 .392 0 0 1 -.568 -.41l.415 -2.411l-1.757 -1.707a0.389 .389 0 0 1 .217 -.665l2.428 -.352l1.086 -2.193a0.392 .392 0 0 1 .702 0l1.086 2.193l2.428 .352a0.39 .39 0 0 1 .217 .665l-1.757 1.707l.414 2.41a0.39 .39 0 0 1 -.567 .411l-2.172 -1.138z" /><path d="M6.2 19.817l-2.172 1.138a0.392 .392 0 0 1 -.568 -.41l.415 -2.411l-1.757 -1.707a0.389 .389 0 0 1 .217 -.665l2.428 -.352l1.086 -2.193a0.392 .392 0 0 1 .702 0l1.086 2.193l2.428 .352a0.39 .39 0 0 1 .217 .665l-1.757 1.707l.414 2.41a0.39 .39 0 0 1 -.567 .411l-2.172 -1.138z" /><path d="M12 9.817l-2.172 1.138a0.392 .392 0 0 1 -.568 -.41l.415 -2.411l-1.757 -1.707a0.389 .389 0 0 1 .217 -.665l2.428 -.352l1.086 -2.193a0.392 .392 0 0 1 .702 0l1.086 2.193l2.428 .352a0.39 .39 0 0 1 .217 .665l-1.757 1.707l.414 2.41a0.39 .39 0 0 1 -.567 .411l-2.172 -1.138z" /></svg>
+                        </a>
+                        <a href="https://tabler-icons.io/i/status-change" target="_blank" rel="noopener" class="demo-icons-list-item" title="status-change" data-bs-toggle="tooltip" data-bs-placement="top">
+                          <!-- Download SVG icon from http://tabler-icons.io/i/status-change -->
+                          <svg xmlns="http://www.w3.org/2000/svg" class="icon" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round"><path stroke="none" d="M0 0h24v24H0z" fill="none"/><circle cx="6" cy="18" r="2" /><circle cx="18" cy="18" r="2" /><path d="M6 12v-2a6 6 0 1 1 12 0v2" /><path d="M15 9l3 3l3 -3" /></svg>
                         </a>
                         <a href="https://tabler-icons.io/i/steam" target="_blank" rel="noopener" class="demo-icons-list-item" title="steam" data-bs-toggle="tooltip" data-bs-placement="top">
                           <!-- Download SVG icon from http://tabler-icons.io/i/steam -->
@@ -8852,6 +8913,10 @@
                           <!-- Download SVG icon from http://tabler-icons.io/i/truck -->
                           <svg xmlns="http://www.w3.org/2000/svg" class="icon" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round"><path stroke="none" d="M0 0h24v24H0z" fill="none"/><circle cx="7" cy="17" r="2" /><circle cx="17" cy="17" r="2" /><path d="M5 17h-2v-11a1 1 0 0 1 1 -1h9v12m-4 0h6m4 0h2v-6h-8m0 -5h5l3 5" /></svg>
                         </a>
+                        <a href="https://tabler-icons.io/i/txt" target="_blank" rel="noopener" class="demo-icons-list-item" title="txt" data-bs-toggle="tooltip" data-bs-placement="top">
+                          <!-- Download SVG icon from http://tabler-icons.io/i/txt -->
+                          <svg xmlns="http://www.w3.org/2000/svg" class="icon" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round"><path stroke="none" d="M0 0h24v24H0z" fill="none"/><path d="M3 8h4" /><path d="M5 8v8" /><path d="M17 8h4" /><path d="M19 8v8" /><path d="M10 8l4 8" /><path d="M10 16l4 -8" /></svg>
+                        </a>
                         <a href="https://tabler-icons.io/i/typography-off" target="_blank" rel="noopener" class="demo-icons-list-item" title="typography-off" data-bs-toggle="tooltip" data-bs-placement="top">
                           <!-- Download SVG icon from http://tabler-icons.io/i/typography-off -->
                           <svg xmlns="http://www.w3.org/2000/svg" class="icon" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round"><path stroke="none" d="M0 0h24v24H0z" fill="none"/><path d="M4 20h3" /><path d="M14 20h6" /><path d="M6.9 15h6.9" /><path d="M13 13l3 7" /><path d="M5 20l4.09 -10.906" /><path d="M10.181 6.183l.819 -2.183h2l3.904 8.924" /><path d="M3 3l18 18" /></svg>
@@ -8935,6 +9000,10 @@
                         <a href="https://tabler-icons.io/i/users" target="_blank" rel="noopener" class="demo-icons-list-item" title="users" data-bs-toggle="tooltip" data-bs-placement="top">
                           <!-- Download SVG icon from http://tabler-icons.io/i/users -->
                           <svg xmlns="http://www.w3.org/2000/svg" class="icon" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round"><path stroke="none" d="M0 0h24v24H0z" fill="none"/><circle cx="9" cy="7" r="4" /><path d="M3 21v-2a4 4 0 0 1 4 -4h4a4 4 0 0 1 4 4v2" /><path d="M16 3.13a4 4 0 0 1 0 7.75" /><path d="M21 21v-2a4 4 0 0 0 -3 -3.85" /></svg>
+                        </a>
+                        <a href="https://tabler-icons.io/i/uv-index" target="_blank" rel="noopener" class="demo-icons-list-item" title="uv-index" data-bs-toggle="tooltip" data-bs-placement="top">
+                          <!-- Download SVG icon from http://tabler-icons.io/i/uv-index -->
+                          <svg xmlns="http://www.w3.org/2000/svg" class="icon" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round"><path stroke="none" d="M0 0h24v24H0z" fill="none"/><path d="M3 12h1m16 0h1m-15.4 -6.4l.7 .7m12.1 -.7l-.7 .7m-9.7 5.7a4 4 0 1 1 8 0" /><path d="M12 4v-1" /><path d="M13 16l2 5h1l2 -5" /><path d="M6 16v3a2 2 0 1 0 4 0v-3" /></svg>
                         </a>
                         <a href="https://tabler-icons.io/i/ux-circle" target="_blank" rel="noopener" class="demo-icons-list-item" title="ux-circle" data-bs-toggle="tooltip" data-bs-placement="top">
                           <!-- Download SVG icon from http://tabler-icons.io/i/ux-circle -->
@@ -9047,6 +9116,10 @@
                         <a href="https://tabler-icons.io/i/vinyl" target="_blank" rel="noopener" class="demo-icons-list-item" title="vinyl" data-bs-toggle="tooltip" data-bs-placement="top">
                           <!-- Download SVG icon from http://tabler-icons.io/i/vinyl -->
                           <svg xmlns="http://www.w3.org/2000/svg" class="icon" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round"><path stroke="none" d="M0 0h24v24H0z" fill="none"/><path d="M16.004 3.937a9 9 0 1 0 4.996 8.063" /><circle cx="12" cy="12" r="1" /><circle cx="20" cy="4" r="1" /><path d="M20 4l-3.5 10l-2.5 2" /></svg>
+                        </a>
+                        <a href="https://tabler-icons.io/i/vip" target="_blank" rel="noopener" class="demo-icons-list-item" title="vip" data-bs-toggle="tooltip" data-bs-placement="top">
+                          <!-- Download SVG icon from http://tabler-icons.io/i/vip -->
+                          <svg xmlns="http://www.w3.org/2000/svg" class="icon" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round"><path stroke="none" d="M0 0h24v24H0z" fill="none"/><path d="M3 5h18" /><path d="M3 19h18" /><path d="M4 9l2 6h1l2 -6" /><path d="M12 9v6" /><path d="M16 15v-6h2a2 2 0 1 1 0 4h-2" /></svg>
                         </a>
                         <a href="https://tabler-icons.io/i/virus-off" target="_blank" rel="noopener" class="demo-icons-list-item" title="virus-off" data-bs-toggle="tooltip" data-bs-placement="top">
                           <!-- Download SVG icon from http://tabler-icons.io/i/virus-off -->
@@ -9392,6 +9465,10 @@
                           <!-- Download SVG icon from http://tabler-icons.io/i/zeppelin -->
                           <svg xmlns="http://www.w3.org/2000/svg" class="icon" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round"><path stroke="none" d="M0 0h24v24H0z" fill="none"/><path d="M13.5 4c4.694 0 8.5 2.686 8.5 6s-3.806 6 -8.5 6c-2.13 0 -4.584 -.926 -7.364 -2.777l-2.136 1.777v-3.33a46.07 46.07 0 0 1 -2 -1.67a46.07 46.07 0 0 1 2 -1.67v-3.33l2.135 1.778c2.78 -1.852 5.235 -2.778 7.365 -2.778z" /><path d="M10 15.5v4.5h6v-4" /></svg>
                         </a>
+                        <a href="https://tabler-icons.io/i/zip" target="_blank" rel="noopener" class="demo-icons-list-item" title="zip" data-bs-toggle="tooltip" data-bs-placement="top">
+                          <!-- Download SVG icon from http://tabler-icons.io/i/zip -->
+                          <svg xmlns="http://www.w3.org/2000/svg" class="icon" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round"><path stroke="none" d="M0 0h24v24H0z" fill="none"/><path d="M16 16v-8h2a2 2 0 1 1 0 4h-2" /><path d="M12 8v8" /><path d="M4 8h4l-4 8h4" /></svg>
+                        </a>
                         <a href="https://tabler-icons.io/i/zodiac-aquarius" target="_blank" rel="noopener" class="demo-icons-list-item" title="zodiac-aquarius" data-bs-toggle="tooltip" data-bs-placement="top">
                           <!-- Download SVG icon from http://tabler-icons.io/i/zodiac-aquarius -->
                           <svg xmlns="http://www.w3.org/2000/svg" class="icon" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round"><path stroke="none" d="M0 0h24v24H0z" fill="none"/><path d="M3 10l3 -3l3 3l3 -3l3 3l3 -3l3 3" /><path d="M3 17l3 -3l3 3l3 -3l3 3l3 -3l3 3" /></svg>
@@ -9542,6 +9619,10 @@
                           <!-- Download SVG icon from http://tabler-icons.io/i/brand-airtable -->
                           <svg xmlns="http://www.w3.org/2000/svg" class="icon" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round"><path stroke="none" d="M0 0h24v24H0z" fill="none"/><path d="M3 10v8l7 -3v-2.6z" /><path d="M3 6l9 3l9 -3l-9 -3z" /><path d="M14 12.3v8.7l7 -3v-8z" /></svg>
                         </a>
+                        <a href="https://tabler-icons.io/i/brand-albolia" target="_blank" rel="noopener" class="demo-icons-list-item" title="brand-albolia" data-bs-toggle="tooltip" data-bs-placement="top">
+                          <!-- Download SVG icon from http://tabler-icons.io/i/brand-albolia -->
+                          <svg xmlns="http://www.w3.org/2000/svg" class="icon" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round"><path stroke="none" d="M0 0h24v24H0z" fill="none"/><rect x="4" y="4" width="16" height="16" rx="2" /><path d="M11.5 7h1" /><path d="M7.403 9.11l.707 -.706" /><circle cx="12" cy="13" r="3.5" /><path d="M12 12v1l.9 -.5z" /></svg>
+                        </a>
                         <a href="https://tabler-icons.io/i/brand-alpine-js" target="_blank" rel="noopener" class="demo-icons-list-item" title="brand-alpine-js" data-bs-toggle="tooltip" data-bs-placement="top">
                           <!-- Download SVG icon from http://tabler-icons.io/i/brand-alpine-js -->
                           <svg xmlns="http://www.w3.org/2000/svg" class="icon" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round"><path stroke="none" d="M0 0h24v24H0z" fill="none"/><path d="M2 10.375l5.455 5.625h6.545l-8.727 -9z" /><path d="M15 12.5l3.5 3.5l3.5 -3.5l-3.5 -3.5z" /></svg>
@@ -9642,6 +9723,10 @@
                           <!-- Download SVG icon from http://tabler-icons.io/i/brand-carbon -->
                           <svg xmlns="http://www.w3.org/2000/svg" class="icon" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round"><path stroke="none" d="M0 0h24v24H0z" fill="none"/><path d="M14 10v-.2a1.8 1.8 0 0 0 -1.8 -1.8h-.4a1.8 1.8 0 0 0 -1.8 1.8v4.4a1.8 1.8 0 0 0 1.8 1.8h.4a1.8 1.8 0 0 0 1.8 -1.8v-.2" /><rect x="3" y="3" width="18" height="18" rx="3" /></svg>
                         </a>
+                        <a href="https://tabler-icons.io/i/brand-cashapp" target="_blank" rel="noopener" class="demo-icons-list-item" title="brand-cashapp" data-bs-toggle="tooltip" data-bs-placement="top">
+                          <!-- Download SVG icon from http://tabler-icons.io/i/brand-cashapp -->
+                          <svg xmlns="http://www.w3.org/2000/svg" class="icon" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round"><path stroke="none" d="M0 0h24v24H0z" fill="none"/><path d="M17.1 8.648a0.568 .568 0 0 1 -.761 .011a5.682 5.682 0 0 0 -3.659 -1.34c-1.102 0 -2.205 .363 -2.205 1.374c0 1.023 1.182 1.364 2.546 1.875c2.386 .796 4.363 1.796 4.363 4.137c0 2.545 -1.977 4.295 -5.204 4.488l-.295 1.364a0.557 .557 0 0 1 -.546 .443h-2.034l-.102 -.011a0.568 .568 0 0 1 -.432 -.67l.318 -1.444a7.432 7.432 0 0 1 -3.273 -1.784v-.011a0.545 .545 0 0 1 0 -.773l1.137 -1.102c.214 -.2 .547 -.2 .761 0a5.495 5.495 0 0 0 3.852 1.5c1.478 0 2.466 -.625 2.466 -1.614c0 -.989 -1 -1.25 -2.886 -1.954c-2 -.716 -3.898 -1.728 -3.898 -4.091c0 -2.75 2.284 -4.091 4.989 -4.216l.284 -1.398a0.545 .545 0 0 1 .545 -.432h2.023l.114 .012a0.544 .544 0 0 1 .42 .647l-.307 1.557a8.528 8.528 0 0 1 2.818 1.58l.023 .022c.216 .228 .216 .569 0 .773l-1.057 1.057z" /></svg>
+                        </a>
                         <a href="https://tabler-icons.io/i/brand-chrome" target="_blank" rel="noopener" class="demo-icons-list-item" title="brand-chrome" data-bs-toggle="tooltip" data-bs-placement="top">
                           <!-- Download SVG icon from http://tabler-icons.io/i/brand-chrome -->
                           <svg xmlns="http://www.w3.org/2000/svg" class="icon" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round"><path stroke="none" d="M0 0h24v24H0z" fill="none"/><circle cx="12" cy="12" r="9" /><circle cx="12" cy="12" r="3" /><line x1="12" y1="9" x2="20.4" y2="9" /><line x1="12" y1="9" x2="20.4" y2="9" transform="rotate(120 12 12)" /><line x1="12" y1="9" x2="20.4" y2="9" transform="rotate(240 12 12)" /></svg>
@@ -9665,6 +9750,10 @@
                         <a href="https://tabler-icons.io/i/brand-comedy-central" target="_blank" rel="noopener" class="demo-icons-list-item" title="brand-comedy-central" data-bs-toggle="tooltip" data-bs-placement="top">
                           <!-- Download SVG icon from http://tabler-icons.io/i/brand-comedy-central -->
                           <svg xmlns="http://www.w3.org/2000/svg" class="icon" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round"><path stroke="none" d="M0 0h24v24H0z" fill="none"/><path d="M5.343 17.657a8 8 0 1 0 0 -11.314" /><path d="M13.828 9.172a4 4 0 1 0 0 5.656" /></svg>
+                        </a>
+                        <a href="https://tabler-icons.io/i/brand-couchsurfing" target="_blank" rel="noopener" class="demo-icons-list-item" title="brand-couchsurfing" data-bs-toggle="tooltip" data-bs-placement="top">
+                          <!-- Download SVG icon from http://tabler-icons.io/i/brand-couchsurfing -->
+                          <svg xmlns="http://www.w3.org/2000/svg" class="icon" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round"><path stroke="none" d="M0 0h24v24H0z" fill="none"/><path d="M3.1 13c3.267 0 5.9 -.167 7.9 -.5c3 -.5 4 -2 4 -3.5a3 3 0 1 0 -6 0c0 1.554 1.807 3.005 3 4c1.193 .995 2 2.5 2 3.5a1.5 1.5 0 1 1 -3 0c0 -2 4 -3.5 7 -3.5h2.9" /><circle cx="12" cy="12" r="9" /></svg>
                         </a>
                         <a href="https://tabler-icons.io/i/brand-css3" target="_blank" rel="noopener" class="demo-icons-list-item" title="brand-css3" data-bs-toggle="tooltip" data-bs-placement="top">
                           <!-- Download SVG icon from http://tabler-icons.io/i/brand-css3 -->
@@ -9722,9 +9811,17 @@
                           <!-- Download SVG icon from http://tabler-icons.io/i/brand-dribbble -->
                           <svg xmlns="http://www.w3.org/2000/svg" class="icon" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round"><path stroke="none" d="M0 0h24v24H0z" fill="none"/><circle cx="12" cy="12" r="9" /><path d="M9 3.6c5 6 7 10.5 7.5 16.2" /><path d="M6.4 19c3.5 -3.5 6 -6.5 14.5 -6.4" /><path d="M3.1 10.75c5 0 9.814 -.38 15.314 -5" /></svg>
                         </a>
+                        <a href="https://tabler-icons.io/i/brand-drupal" target="_blank" rel="noopener" class="demo-icons-list-item" title="brand-drupal" data-bs-toggle="tooltip" data-bs-placement="top">
+                          <!-- Download SVG icon from http://tabler-icons.io/i/brand-drupal -->
+                          <svg xmlns="http://www.w3.org/2000/svg" class="icon" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round"><path stroke="none" d="M0 0h24v24H0z" fill="none"/><path d="M12 2c0 4.308 -7 6 -7 12.005a7 7 0 0 0 14 0c0 -6.005 -7 -7.697 -7 -12.005z" /><path d="M12 11.33a65.753 65.753 0 0 1 -2.012 2.023c-.996 .957 -1.988 1.967 -1.988 3.647c0 2.17 1.79 3.997 4 3.997s4 -1.827 4 -3.997c0 -1.676 -.989 -2.685 -1.983 -3.642c-.42 -.404 -2.259 -2.357 -5.517 -5.858l3.5 3.83z" /></svg>
+                        </a>
                         <a href="https://tabler-icons.io/i/brand-edge" target="_blank" rel="noopener" class="demo-icons-list-item" title="brand-edge" data-bs-toggle="tooltip" data-bs-placement="top">
                           <!-- Download SVG icon from http://tabler-icons.io/i/brand-edge -->
                           <svg xmlns="http://www.w3.org/2000/svg" class="icon" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round"><path stroke="none" d="M0 0h24v24H0z" fill="none"/><path d="M20.978 11.372a9 9 0 1 0 -1.593 5.773" /><path d="M20.978 11.372c.21 2.993 -5.034 2.413 -6.913 1.486c1.392 -1.6 .402 -4.038 -2.274 -3.851c-1.745 .122 -2.927 1.157 -2.784 3.202c.28 3.99 4.444 6.205 10.36 4.79" /><path d="M3.022 12.628c-.283 -4.043 8.717 -7.228 11.248 -2.688" /><path d="M12.628 20.978c-2.993 .21 -5.162 -4.725 -3.567 -9.748" /></svg>
+                        </a>
+                        <a href="https://tabler-icons.io/i/brand-envato" target="_blank" rel="noopener" class="demo-icons-list-item" title="brand-envato" data-bs-toggle="tooltip" data-bs-placement="top">
+                          <!-- Download SVG icon from http://tabler-icons.io/i/brand-envato -->
+                          <svg xmlns="http://www.w3.org/2000/svg" class="icon" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round"><path stroke="none" d="M0 0h24v24H0z" fill="none"/><path d="M4.711 17.875c-.534 -1.339 -1.35 -4.178 .129 -6.47c1.415 -2.193 3.769 -3.608 5.099 -4.278l-5.229 10.748z" /><path d="M19.715 12.508c-.54 3.409 -2.094 6.156 -4.155 7.348c-4.069 2.353 -8.144 .45 -9.297 -.188c.877 -1.436 4.433 -7.22 6.882 -10.591c2.714 -3.737 5.864 -5.978 6.565 -6.077c.001 .201 .03 .55 .071 1.03c.144 1.709 .443 5.264 -.066 8.478z" /></svg>
                         </a>
                         <a href="https://tabler-icons.io/i/brand-facebook" target="_blank" rel="noopener" class="demo-icons-list-item" title="brand-facebook" data-bs-toggle="tooltip" data-bs-placement="top">
                           <!-- Download SVG icon from http://tabler-icons.io/i/brand-facebook -->
@@ -9754,6 +9851,10 @@
                           <!-- Download SVG icon from http://tabler-icons.io/i/brand-flipboard -->
                           <svg xmlns="http://www.w3.org/2000/svg" class="icon" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round"><path stroke="none" d="M0 0h24v24H0z" fill="none"/><path d="M3.973 3h16.054c.537 0 .973 .436 .973 .973v4.052a0.973 .973 0 0 1 -.973 .973h-5.025v4.831c0 .648 -.525 1.173 -1.173 1.173h-4.829v5.025a0.973 .973 0 0 1 -.974 .973h-4.053a0.973 .973 0 0 1 -.973 -.973v-16.054c0 -.537 .436 -.973 .973 -.973z" /></svg>
                         </a>
+                        <a href="https://tabler-icons.io/i/brand-flutter" target="_blank" rel="noopener" class="demo-icons-list-item" title="brand-flutter" data-bs-toggle="tooltip" data-bs-placement="top">
+                          <!-- Download SVG icon from http://tabler-icons.io/i/brand-flutter -->
+                          <svg xmlns="http://www.w3.org/2000/svg" class="icon" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round"><path stroke="none" d="M0 0h24v24H0z" fill="none"/><path d="M7 14l-3 -3l8 -8h6z" /><path d="M14 21l-5 -5l5 -5h5l-5 5l5 5z" /></svg>
+                        </a>
                         <a href="https://tabler-icons.io/i/brand-fortnite" target="_blank" rel="noopener" class="demo-icons-list-item" title="brand-fortnite" data-bs-toggle="tooltip" data-bs-placement="top">
                           <!-- Download SVG icon from http://tabler-icons.io/i/brand-fortnite -->
                           <svg xmlns="http://www.w3.org/2000/svg" class="icon" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round"><path stroke="none" d="M0 0h24v24H0z" fill="none"/><path d="M8 3h7.5l-.5 4h-3v3h3v3.5h-3v6.5l-4 1z" /></svg>
@@ -9765,6 +9866,10 @@
                         <a href="https://tabler-icons.io/i/brand-framer" target="_blank" rel="noopener" class="demo-icons-list-item" title="brand-framer" data-bs-toggle="tooltip" data-bs-placement="top">
                           <!-- Download SVG icon from http://tabler-icons.io/i/brand-framer -->
                           <svg xmlns="http://www.w3.org/2000/svg" class="icon" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round"><path stroke="none" d="M0 0h24v24H0z" fill="none"/><path d="M6 15h12l-12 -12h12v6h-12v6l6 6v-6" /></svg>
+                        </a>
+                        <a href="https://tabler-icons.io/i/brand-gatsby" target="_blank" rel="noopener" class="demo-icons-list-item" title="brand-gatsby" data-bs-toggle="tooltip" data-bs-placement="top">
+                          <!-- Download SVG icon from http://tabler-icons.io/i/brand-gatsby -->
+                          <svg xmlns="http://www.w3.org/2000/svg" class="icon" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round"><path stroke="none" d="M0 0h24v24H0z" fill="none"/><path d="M3.296 14.297l6.407 6.407a9.018 9.018 0 0 1 -6.325 -6.116l-.082 -.291z" /><path d="M16 13h5c-.41 3.603 -3.007 6.59 -6.386 7.614l-11.228 -11.229a9.004 9.004 0 0 1 15.66 -2.985" /></svg>
                         </a>
                         <a href="https://tabler-icons.io/i/brand-git" target="_blank" rel="noopener" class="demo-icons-list-item" title="brand-git" data-bs-toggle="tooltip" data-bs-placement="top">
                           <!-- Download SVG icon from http://tabler-icons.io/i/brand-git -->
@@ -9816,7 +9921,7 @@
                         </a>
                         <a href="https://tabler-icons.io/i/brand-graphql" target="_blank" rel="noopener" class="demo-icons-list-item" title="brand-graphql" data-bs-toggle="tooltip" data-bs-placement="top">
                           <!-- Download SVG icon from http://tabler-icons.io/i/brand-graphql -->
-                          <svg xmlns="http://www.w3.org/2000/svg" class="icon" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round"><path stroke="none" d="M0 0h24v24H0z" fill="none"/><path d="M20 16l-8 -13l-8 13l8 5l8 -5v-8l-8 -5l-8 5v8z" /><circle cx="12" cy="3" r="1" /><circle cx="12" cy="21" r="1" /><circle cx="4" cy="8" r="1" /><circle cx="4" cy="16" r="1" /><circle cx="20" cy="16" r="1" /><circle cx="20" cy="8" r="1" /></svg>
+                          <svg xmlns="http://www.w3.org/2000/svg" class="icon" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round"><path stroke="none" d="M0 0h24v24H0z" fill="none"/><g transform="translate(2.5 2)"><path d="M2.808 5.265l5.385 -3.029" /><path d="M10.808 2.235l5.384 3.03" /><path d="M17.5 7.5v5" /><path d="M16.193 14.736l-5.385 3.029" /><path d="M8.192 17.765l-5.384 -3.03" /><path d="M1.5 12.5v-5" /><path d="M10.272 2.786l6.121 10.202" /><path d="M16 14h-13" /><path d="M2.607 12.988l6.122 -10.201" /><circle cx="9.5" cy="1.5" r="1.5" /><circle cx="9.5" cy="18.5" r="1.5" /><circle cx="1.5" cy="6" r="1.5" /><circle cx="1.5" cy="14" r="1.5" /><circle cx="17.5" cy="14" r="1.5" /><circle cx="17.5" cy="6" r="1.5" /></g></svg>
                         </a>
                         <a href="https://tabler-icons.io/i/brand-gravatar" target="_blank" rel="noopener" class="demo-icons-list-item" title="brand-gravatar" data-bs-toggle="tooltip" data-bs-placement="top">
                           <!-- Download SVG icon from http://tabler-icons.io/i/brand-gravatar -->
@@ -9918,6 +10023,10 @@
                           <!-- Download SVG icon from http://tabler-icons.io/i/brand-meta -->
                           <svg xmlns="http://www.w3.org/2000/svg" class="icon" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round"><path stroke="none" d="M0 0h24v24H0z" fill="none"/><path d="M12 10.174c1.766 -2.784 3.315 -4.174 4.648 -4.174c2 0 3.263 2.213 4 5.217c.704 2.869 .5 6.783 -2 6.783c-1.114 0 -2.648 -1.565 -4.148 -3.652a27.627 27.627 0 0 1 -2.5 -4.174z" /><path d="M12 10.174c-1.766 -2.784 -3.315 -4.174 -4.648 -4.174c-2 0 -3.263 2.213 -4 5.217c-.704 2.869 -.5 6.783 2 6.783c1.114 0 2.648 -1.565 4.148 -3.652c1 -1.391 1.833 -2.783 2.5 -4.174z" /></svg>
                         </a>
+                        <a href="https://tabler-icons.io/i/brand-mixpanel" target="_blank" rel="noopener" class="demo-icons-list-item" title="brand-mixpanel" data-bs-toggle="tooltip" data-bs-placement="top">
+                          <!-- Download SVG icon from http://tabler-icons.io/i/brand-mixpanel -->
+                          <svg xmlns="http://www.w3.org/2000/svg" class="icon" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round"><path stroke="none" d="M0 0h24v24H0z" fill="none"/><circle cx="4.5" cy="12" r="2.5" /><circle cx="20.5" cy="12" r="1.5" /><circle cx="13" cy="12" r="2" /></svg>
+                        </a>
                         <a href="https://tabler-icons.io/i/brand-monday" target="_blank" rel="noopener" class="demo-icons-list-item" title="brand-monday" data-bs-toggle="tooltip" data-bs-placement="top">
                           <!-- Download SVG icon from http://tabler-icons.io/i/brand-monday -->
                           <svg xmlns="http://www.w3.org/2000/svg" class="icon" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round"><path stroke="none" d="M0 0h24v24H0z" fill="none"/><circle cx="19.5" cy="15.5" r="1.5" /><path d="M9.5 7a1.5 1.5 0 0 1 1.339 2.177l-4.034 7.074c-.264 .447 -.75 .749 -1.305 .749a1.5 1.5 0 0 1 -1.271 -2.297l3.906 -6.827a1.5 1.5 0 0 1 1.365 -.876z" /><path d="M16.5 7a1.5 1.5 0 0 1 1.339 2.177l-4.034 7.074c-.264 .447 -.75 .749 -1.305 .749a1.5 1.5 0 0 1 -1.271 -2.297l3.906 -6.827a1.5 1.5 0 0 1 1.365 -.876z" /></svg>
@@ -9950,9 +10059,21 @@
                           <!-- Download SVG icon from http://tabler-icons.io/i/brand-nytimes -->
                           <svg xmlns="http://www.w3.org/2000/svg" class="icon" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round"><path stroke="none" d="M0 0h24v24H0z" fill="none"/><path d="M11.036 5.058a8.001 8.001 0 1 0 8.706 9.965" /><path d="M12 21v-11l-7.5 4" /><path d="M17.5 3a2.5 2.5 0 1 1 0 5l-11 -5a2.5 2.5 0 0 0 -.67 4.91" /><path d="M9 12v8" /><path d="M16 13h-.01" /></svg>
                         </a>
+                        <a href="https://tabler-icons.io/i/brand-office" target="_blank" rel="noopener" class="demo-icons-list-item" title="brand-office" data-bs-toggle="tooltip" data-bs-placement="top">
+                          <!-- Download SVG icon from http://tabler-icons.io/i/brand-office -->
+                          <svg xmlns="http://www.w3.org/2000/svg" class="icon" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round"><path stroke="none" d="M0 0h24v24H0z" fill="none"/><path d="M4 18h9v-12l-5 2v5l-4 2v-8l9 -4l7 2v13l-7 3z" /></svg>
+                        </a>
+                        <a href="https://tabler-icons.io/i/brand-ok-ru" target="_blank" rel="noopener" class="demo-icons-list-item" title="brand-ok-ru" data-bs-toggle="tooltip" data-bs-placement="top">
+                          <!-- Download SVG icon from http://tabler-icons.io/i/brand-ok-ru -->
+                          <svg xmlns="http://www.w3.org/2000/svg" class="icon" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round"><path stroke="none" d="M0 0h24v24H0z" fill="none"/><circle cx="12" cy="9" r="2" /><path d="M20 12c0 8 0 8 -8 8s-8 0 -8 -8s0 -8 8 -8s8 0 8 8z" /><path d="M9.5 13c1.333 .667 3.667 .667 5 0" /><path d="M9.5 17l2.5 -3l2.5 3" /><path d="M12 13.5v.5" /></svg>
+                        </a>
                         <a href="https://tabler-icons.io/i/brand-open-source" target="_blank" rel="noopener" class="demo-icons-list-item" title="brand-open-source" data-bs-toggle="tooltip" data-bs-placement="top">
                           <!-- Download SVG icon from http://tabler-icons.io/i/brand-open-source -->
                           <svg xmlns="http://www.w3.org/2000/svg" class="icon" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round"><path stroke="none" d="M0 0h24v24H0z" fill="none"/><path d="M12 3a9 9 0 0 1 3.618 17.243l-2.193 -5.602a3 3 0 1 0 -2.849 0l-2.193 5.603a9 9 0 0 1 3.617 -17.244z" /></svg>
+                        </a>
+                        <a href="https://tabler-icons.io/i/brand-openvpn" target="_blank" rel="noopener" class="demo-icons-list-item" title="brand-openvpn" data-bs-toggle="tooltip" data-bs-placement="top">
+                          <!-- Download SVG icon from http://tabler-icons.io/i/brand-openvpn -->
+                          <svg xmlns="http://www.w3.org/2000/svg" class="icon" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round"><path stroke="none" d="M0 0h24v24H0z" fill="none"/><path d="M15.618 20.243l-2.193 -5.602a3 3 0 1 0 -2.849 0l-2.193 5.603" /><circle cx="12" cy="12" r="9" /></svg>
                         </a>
                         <a href="https://tabler-icons.io/i/brand-opera" target="_blank" rel="noopener" class="demo-icons-list-item" title="brand-opera" data-bs-toggle="tooltip" data-bs-placement="top">
                           <!-- Download SVG icon from http://tabler-icons.io/i/brand-opera -->
@@ -9969,6 +10090,10 @@
                         <a href="https://tabler-icons.io/i/brand-paypal" target="_blank" rel="noopener" class="demo-icons-list-item" title="brand-paypal" data-bs-toggle="tooltip" data-bs-placement="top">
                           <!-- Download SVG icon from http://tabler-icons.io/i/brand-paypal -->
                           <svg xmlns="http://www.w3.org/2000/svg" class="icon" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round"><path stroke="none" d="M0 0h24v24H0z" fill="none"/><path d="M10 13l2.5 0c2.5 0 5 -2.5 5 -5c0 -3 -1.9 -5 -5 -5h-5.5c-.5 0 -1 .5 -1 1l-2 14c0 .5 .5 1 1 1h2.8l1.2 -5c.1 -.6 .4 -1 1 -1zm7.5 -5.8c1.7 1 2.5 2.8 2.5 4.8c0 2.5 -2.5 4.5 -5 4.5h-2.6l-.6 3.6a1 1 0 0 1 -1 .8l-2.7 0a0.5 .5 0 0 1 -.5 -.6l.2 -1.4" /></svg>
+                        </a>
+                        <a href="https://tabler-icons.io/i/brand-peanut" target="_blank" rel="noopener" class="demo-icons-list-item" title="brand-peanut" data-bs-toggle="tooltip" data-bs-placement="top">
+                          <!-- Download SVG icon from http://tabler-icons.io/i/brand-peanut -->
+                          <svg xmlns="http://www.w3.org/2000/svg" class="icon" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round"><path stroke="none" d="M0 0h24v24H0z" fill="none"/><path d="M15 16.25l-.816 -.36l-.462 -.196c-1.444 -.592 -2 -.593 -3.447 -.002l-.462 .195l-.817 .359a4.5 4.5 0 1 1 .004 -8.49v-.006l1.054 .462l.434 .178c1.292 .507 1.863 .48 3.237 -.082l.462 -.195l.817 -.359a4.5 4.5 0 1 1 -.004 8.49" /></svg>
                         </a>
                         <a href="https://tabler-icons.io/i/brand-pepsi" target="_blank" rel="noopener" class="demo-icons-list-item" title="brand-pepsi" data-bs-toggle="tooltip" data-bs-placement="top">
                           <!-- Download SVG icon from http://tabler-icons.io/i/brand-pepsi -->
@@ -10008,7 +10133,7 @@
                         </a>
                         <a href="https://tabler-icons.io/i/brand-react" target="_blank" rel="noopener" class="demo-icons-list-item" title="brand-react" data-bs-toggle="tooltip" data-bs-placement="top">
                           <!-- Download SVG icon from http://tabler-icons.io/i/brand-react -->
-                          <svg xmlns="http://www.w3.org/2000/svg" class="icon" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round"><path stroke="none" d="M0 0h24v24H0z" fill="none"/><ellipse cx="12" cy="12" rx="4" ry="10" /><ellipse transform="rotate(60 12 12)" cx="12" cy="12" rx="4" ry="10" /><ellipse transform="rotate(-60 12 12)" cx="12" cy="12" rx="4" ry="10" /><circle fill="currentColor" cx="12" cy="12" r="1" /></svg>
+                          <svg xmlns="http://www.w3.org/2000/svg" class="icon" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round"><path stroke="none" d="M0 0h24v24H0z" fill="none"/><path d="M6.306 8.711c-2.602 .723 -4.306 1.926 -4.306 3.289c0 2.21 4.477 4 10 4c.773 0 1.526 -.035 2.248 -.102m3.444 -.609c2.603 -.722 4.308 -1.926 4.308 -3.289c0 -2.21 -4.477 -4 -10 -4c-.773 0 -1.526 .035 -2.25 .102" /><path d="M6.305 15.287c-.676 2.615 -.485 4.693 .695 5.373c1.913 1.105 5.703 -1.877 8.464 -6.66c.387 -.67 .733 -1.339 1.036 -1.998m1.194 -3.286c.677 -2.616 .487 -4.696 -.694 -5.376c-1.913 -1.105 -5.703 1.877 -8.464 6.66c-.387 .67 -.733 1.34 -1.037 1.999" /><path d="M12 5.424c-1.925 -1.892 -3.82 -2.766 -5 -2.084c-1.913 1.104 -1.226 5.877 1.536 10.66c.386 .67 .793 1.304 1.212 1.896m2.25 2.678c1.926 1.893 3.821 2.768 5.002 2.086c1.913 -1.104 1.226 -5.877 -1.536 -10.66a24.612 24.612 0 0 0 -1.212 -1.897" /><circle fill="#D8D8D8" transform="rotate(30 12 12)" cx="12" cy="12" r="1" /></svg>
                         </a>
                         <a href="https://tabler-icons.io/i/brand-reddit" target="_blank" rel="noopener" class="demo-icons-list-item" title="brand-reddit" data-bs-toggle="tooltip" data-bs-placement="top">
                           <!-- Download SVG icon from http://tabler-icons.io/i/brand-reddit -->
@@ -10017,6 +10142,10 @@
                         <a href="https://tabler-icons.io/i/brand-redhat" target="_blank" rel="noopener" class="demo-icons-list-item" title="brand-redhat" data-bs-toggle="tooltip" data-bs-placement="top">
                           <!-- Download SVG icon from http://tabler-icons.io/i/brand-redhat -->
                           <svg xmlns="http://www.w3.org/2000/svg" class="icon" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round"><path stroke="none" d="M0 0h24v24H0z" fill="none"/><path d="M6 10.5l1.436 -4c.318 -.876 .728 -1.302 1.359 -1.302c.219 0 1.054 .365 1.88 .583c.825 .219 .733 -.329 .908 -.487c.176 -.158 .355 -.294 .61 -.294c.242 0 .553 .048 1.692 .448c.759 .267 1.493 .574 2.204 .922c1.175 .582 1.426 .913 1.595 1.507l.816 4.623c2.086 .898 3.5 2.357 3.5 3.682c0 1.685 -1.2 3.818 -5.957 3.818c-6.206 0 -14.043 -4.042 -14.043 -7.32c0 -1.044 1.333 -1.77 4 -2.18z" /><path d="M6 10.5c0 .969 4.39 3.5 9.5 3.5c1.314 0 3 .063 3 -1.5" /></svg>
+                        </a>
+                        <a href="https://tabler-icons.io/i/brand-redux" target="_blank" rel="noopener" class="demo-icons-list-item" title="brand-redux" data-bs-toggle="tooltip" data-bs-placement="top">
+                          <!-- Download SVG icon from http://tabler-icons.io/i/brand-redux -->
+                          <svg xmlns="http://www.w3.org/2000/svg" class="icon" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round"><path stroke="none" d="M0 0h24v24H0z" fill="none"/><path d="M16.54 7c-.805 -2.365 -2.536 -4 -4.54 -4c-2.774 0 -5.023 2.632 -5.023 6.496c0 1.956 1.582 4.727 2.512 5.996" /><path d="M4.711 11.979c-1.656 1.877 -2.214 4.185 -1.211 5.911c1.387 2.39 5.138 2.831 8.501 .9c1.703 -.979 2.875 -3.362 3.516 -4.798" /><path d="M15.014 19.99c2.511 0 4.523 -.438 5.487 -2.1c1.387 -2.39 -.215 -5.893 -3.579 -7.824c-1.702 -.979 -4.357 -1.235 -5.927 -1.07" /><path d="M10.493 9.862c.48 .276 1.095 .112 1.372 -.366a0.997 .997 0 0 0 -.367 -1.365a1.007 1.007 0 0 0 -1.373 .366a0.997 .997 0 0 0 .368 1.365z" /><ellipse cx="9.489" cy="15.492" rx="1.005" ry="1" /><ellipse cx="15.516" cy="13.993" rx="1.005" ry="1" /></svg>
                         </a>
                         <a href="https://tabler-icons.io/i/brand-safari" target="_blank" rel="noopener" class="demo-icons-list-item" title="brand-safari" data-bs-toggle="tooltip" data-bs-placement="top">
                           <!-- Download SVG icon from http://tabler-icons.io/i/brand-safari -->
@@ -10126,6 +10255,10 @@
                           <!-- Download SVG icon from http://tabler-icons.io/i/brand-toyota -->
                           <svg xmlns="http://www.w3.org/2000/svg" class="icon" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round"><path stroke="none" d="M0 0h24v24H0z" fill="none"/><ellipse cx="12" cy="12" rx="10" ry="7" /><path d="M9 12c0 3.866 1.343 7 3 7s3 -3.134 3 -7s-1.343 -7 -3 -7s-3 3.134 -3 7z" /><path d="M6.415 6.191c-.888 .503 -1.415 1.13 -1.415 1.809c0 1.657 3.134 3 7 3s7 -1.343 7 -3c0 -.678 -.525 -1.304 -1.41 -1.806" /></svg>
                         </a>
+                        <a href="https://tabler-icons.io/i/brand-trello" target="_blank" rel="noopener" class="demo-icons-list-item" title="brand-trello" data-bs-toggle="tooltip" data-bs-placement="top">
+                          <!-- Download SVG icon from http://tabler-icons.io/i/brand-trello -->
+                          <svg xmlns="http://www.w3.org/2000/svg" class="icon" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round"><path stroke="none" d="M0 0h24v24H0z" fill="none"/><rect x="4" y="4" width="16" height="16" rx="2" /><path d="M7 7h3v10h-3z" /><path d="M14 7h3v6h-3z" /></svg>
+                        </a>
                         <a href="https://tabler-icons.io/i/brand-tripadvisor" target="_blank" rel="noopener" class="demo-icons-list-item" title="brand-tripadvisor" data-bs-toggle="tooltip" data-bs-placement="top">
                           <!-- Download SVG icon from http://tabler-icons.io/i/brand-tripadvisor -->
                           <svg xmlns="http://www.w3.org/2000/svg" class="icon" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round"><path stroke="none" d="M0 0h24v24H0z" fill="none"/><circle cx="6.5" cy="13.5" r="1.5" /><circle cx="17.5" cy="13.5" r="1.5" /><path d="M17.5 9a4.5 4.5 0 1 0 3.5 1.671l1 -1.671h-4.5z" /><path d="M6.5 9a4.5 4.5 0 1 1 -3.5 1.671l-1 -1.671h4.5z" /><path d="M10.5 15.5l1.5 2l1.5 -2" /><path d="M9 6.75c2 -.667 4 -.667 6 0" /></svg>
@@ -10157,6 +10290,14 @@
                         <a href="https://tabler-icons.io/i/brand-unsplash" target="_blank" rel="noopener" class="demo-icons-list-item" title="brand-unsplash" data-bs-toggle="tooltip" data-bs-placement="top">
                           <!-- Download SVG icon from http://tabler-icons.io/i/brand-unsplash -->
                           <svg xmlns="http://www.w3.org/2000/svg" class="icon" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round"><path stroke="none" d="M0 0h24v24H0z" fill="none"/><path d="M4 11h5v4h6v-4h5v9h-16zm5 -7h6v4h-6z" /></svg>
+                        </a>
+                        <a href="https://tabler-icons.io/i/brand-upwork" target="_blank" rel="noopener" class="demo-icons-list-item" title="brand-upwork" data-bs-toggle="tooltip" data-bs-placement="top">
+                          <!-- Download SVG icon from http://tabler-icons.io/i/brand-upwork -->
+                          <svg xmlns="http://www.w3.org/2000/svg" class="icon" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round"><path stroke="none" d="M0 0h24v24H0z" fill="none"/><path d="M3 7v5a3 3 0 0 0 6 0v-5h1l4 6c.824 1.319 1.945 2 3.5 2a3.5 3.5 0 0 0 0 -7c-2.027 0 -3.137 1.006 -3.5 3c-.242 1.33 -.908 3.996 -2 8" /></svg>
+                        </a>
+                        <a href="https://tabler-icons.io/i/brand-valorant" target="_blank" rel="noopener" class="demo-icons-list-item" title="brand-valorant" data-bs-toggle="tooltip" data-bs-placement="top">
+                          <!-- Download SVG icon from http://tabler-icons.io/i/brand-valorant -->
+                          <svg xmlns="http://www.w3.org/2000/svg" class="icon" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round"><path stroke="none" d="M0 0h24v24H0z" fill="none"/><path d="M14.5 14h4.5l2 -2v-6z" /><path d="M9 19h5l-11 -13v6z" /></svg>
                         </a>
                         <a href="https://tabler-icons.io/i/brand-vcypress" target="_blank" rel="noopener" class="demo-icons-list-item" title="brand-vcypress" data-bs-toggle="tooltip" data-bs-placement="top">
                           <!-- Download SVG icon from http://tabler-icons.io/i/brand-vcypress -->
@@ -10194,9 +10335,13 @@
                           <!-- Download SVG icon from http://tabler-icons.io/i/brand-vsco -->
                           <svg xmlns="http://www.w3.org/2000/svg" class="icon" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round"><path stroke="none" d="M0 0h24v24H0z" fill="none"/><g transform="translate(2 2)"><circle cx="10" cy="10" r="10" /><circle cx="10" cy="10" r="7" /><circle cx="10" cy="10" r="4" /><path d="M10 0v3" /><path d="M10 17v3" /><path d="M17 10h3" /><path d="M0 10h3" /><path d="M15 1.34l-1.5 2.598" /><path d="M6.5 16.062l-1.5 2.598" /><path d="M16.062 13.5l2.598 1.5" /><path d="M1.34 5l2.598 1.5" /><path d="M5 1.34l1.5 2.598" /><path d="M13.5 16.062l1.5 2.598" /><path d="M16.062 6.5l2.598 -1.5" /><path d="M1.34 15l2.598 -1.5" /><path d="M10 3v3" /><path d="M10 14v3" /><path d="M3 10h3" /><path d="M14 10h3" /><path d="M14.95 5.05l-2.122 2.122" /><path d="M7.172 12.828l-2.122 2.122" /><path d="M5.05 5.05l2.122 2.122" /><path d="M12.828 12.828l2.122 2.122" /></g></svg>
                         </a>
+                        <a href="https://tabler-icons.io/i/brand-vscode" target="_blank" rel="noopener" class="demo-icons-list-item" title="brand-vscode" data-bs-toggle="tooltip" data-bs-placement="top">
+                          <!-- Download SVG icon from http://tabler-icons.io/i/brand-vscode -->
+                          <svg xmlns="http://www.w3.org/2000/svg" class="icon" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round"><path stroke="none" d="M0 0h24v24H0z" fill="none"/><path d="M16 3v18l4 -2.5v-13z" /><path d="M9.165 13.903l-4.165 3.597l-2 -1l4.333 -4.5m1.735 -1.802l6.932 -7.198v5l-4.795 4.141" /><path d="M16 16.5l-11 -10l-2 1l13 13.5" /></svg>
+                        </a>
                         <a href="https://tabler-icons.io/i/brand-vue" target="_blank" rel="noopener" class="demo-icons-list-item" title="brand-vue" data-bs-toggle="tooltip" data-bs-placement="top">
                           <!-- Download SVG icon from http://tabler-icons.io/i/brand-vue -->
-                          <svg xmlns="http://www.w3.org/2000/svg" class="icon" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round"><path stroke="none" d="M0 0h24v24H0z" fill="none"/><path d="M18.5 5l-6.5 10l-6.5 -10" /><path d="M15 5l-3 4.5l-3 -4.5h-7l10 16l10 -16z" /></svg>
+                          <svg xmlns="http://www.w3.org/2000/svg" class="icon" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round"><path stroke="none" d="M0 0h24v24H0z" fill="none"/><path d="M16.5 4l-4.5 8l-4.5 -8" /><path d="M3 4l9 16l9 -16" /></svg>
                         </a>
                         <a href="https://tabler-icons.io/i/brand-walmart" target="_blank" rel="noopener" class="demo-icons-list-item" title="brand-walmart" data-bs-toggle="tooltip" data-bs-placement="top">
                           <!-- Download SVG icon from http://tabler-icons.io/i/brand-walmart -->
@@ -10218,9 +10363,13 @@
                           <!-- Download SVG icon from http://tabler-icons.io/i/brand-wish -->
                           <svg xmlns="http://www.w3.org/2000/svg" class="icon" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round"><path stroke="none" d="M0 0h24v24H0z" fill="none"/><path d="M2 6l5.981 2.392l-.639 6.037c-.18 .893 .06 1.819 .65 2.514a3 3 0 0 0 2.381 1.057a4.328 4.328 0 0 0 4.132 -3.57c-.18 .893 .06 1.819 .65 2.514a3 3 0 0 0 2.38 1.056a4.328 4.328 0 0 0 4.132 -3.57l.333 -4.633" /><path d="M14.504 14.429l.334 -2.999" /></svg>
                         </a>
+                        <a href="https://tabler-icons.io/i/brand-wix" target="_blank" rel="noopener" class="demo-icons-list-item" title="brand-wix" data-bs-toggle="tooltip" data-bs-placement="top">
+                          <!-- Download SVG icon from http://tabler-icons.io/i/brand-wix -->
+                          <svg xmlns="http://www.w3.org/2000/svg" class="icon" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round"><path stroke="none" d="M0 0h24v24H0z" fill="none"/><path d="M3 9l1.5 6l1.379 -5.515a0.64 .64 0 0 1 1.242 0l1.379 5.515l1.5 -6" /><path d="M13 11.5v3.5" /><path d="M16 9l5 6" /><path d="M21 9l-5 6" /><path d="M13 9h.01" /></svg>
+                        </a>
                         <a href="https://tabler-icons.io/i/brand-wordpress" target="_blank" rel="noopener" class="demo-icons-list-item" title="brand-wordpress" data-bs-toggle="tooltip" data-bs-placement="top">
                           <!-- Download SVG icon from http://tabler-icons.io/i/brand-wordpress -->
-                          <svg xmlns="http://www.w3.org/2000/svg" class="icon" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round"><path stroke="none" d="M0 0h24v24H0z" fill="none"/><path d="M9.5 6h5.5" /><path d="M2 6h5" /><path d="M10.5 6l6 13l4.5 -9" /><path d="M13.5 6l4.5 9.5" /><path d="M2.5 6l6 13l4 -8.5" /><path d="M5.5 6l4.5 9.5" /><path d="M21 10c.236 -.739 1 -1.91 1 -3.5c0 -2.492 -1.034 -3.5 -2.5 -3.5c-1.197 0 -1.5 1.137 -1.5 2c0 2.562 3 2.882 3 5z" /></svg>
+                          <svg xmlns="http://www.w3.org/2000/svg" class="icon" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round"><path stroke="none" d="M0 0h24v24H0z" fill="none"/><path d="M9.5 9h3" /><path d="M4 9h2.5" /><path d="M11 9l3 11l4 -9" /><path d="M5.5 9l3.5 11l3 -7" /><path d="M18 11c.177 -.528 1 -1.364 1 -2.5c0 -1.78 -.776 -2.5 -1.875 -2.5c-.898 0 -1.125 .812 -1.125 1.429c0 1.83 2 2.058 2 3.571z" /><circle cx="12" cy="12" r="9" /></svg>
                         </a>
                         <a href="https://tabler-icons.io/i/brand-xbox" target="_blank" rel="noopener" class="demo-icons-list-item" title="brand-xbox" data-bs-toggle="tooltip" data-bs-placement="top">
                           <!-- Download SVG icon from http://tabler-icons.io/i/brand-xbox -->
