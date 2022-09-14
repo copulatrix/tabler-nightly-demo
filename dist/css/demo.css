@@ -339,7 +339,7 @@ body.no-transitions * {
   top: 10rem;
   border-top-right-radius: 0;
   border-bottom-right-radius: 0;
-  box-shadow: rgba(29, 39, 59, 0.04) 0 2px 4px 0; }
+  box-shadow: rgba(var(--tblr-body-color-rgb), 0.04) 0 2px 4px 0; }
 
 .settings-scheme {
   display: inline-block;
@@ -348,7 +348,7 @@ body.no-transitions * {
   width: 3rem;
   position: relative;
   border: 1px solid var(--tblr-border-color);
-  box-shadow: rgba(29, 39, 59, 0.04) 0 2px 4px 0; }
+  box-shadow: rgba(var(--tblr-body-color-rgb), 0.04) 0 2px 4px 0; }
   .settings-scheme-light {
     background: linear-gradient(135deg, #ffffff 50%, #f8fafc 50%); }
   .settings-scheme-mixed {

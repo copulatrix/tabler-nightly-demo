@@ -1023,7 +1023,7 @@ image, text, .jvm-zoomin, .jvm-zoomout {
   background: #1d273b;
   font-family: inherit;
   font-size: 0.75rem;
-  box-shadow: rgba(29, 39, 59, 0.04) 0 2px 4px 0; }
+  box-shadow: var(--tblr-shadow-card); }
 
 .jvm-series-container .jvm-legend .jvm-legend-title {
   border-bottom: 0;
@@ -1052,7 +1052,7 @@ image, text, .jvm-zoomin, .jvm-zoomout {
   width: 1.5rem;
   height: 1.5rem;
   font-size: 1rem;
-  box-shadow: rgba(29, 39, 59, 0.04) 0 2px 4px 0; }
+  box-shadow: var(--tblr-shadow-card); }
   .jvm-zoom-btn.jvm-zoomout {
     top: 2.5rem; }
 
