@@ -355,12 +355,12 @@
   .litepicker svg {
     fill: none !important; }
   .litepicker .container__main {
-    border: 1px solid var(--tblr-border-color);
+    border: var(--tblr-border-width) solid var(--tblr-border-color);
     border-radius: var(--tblr-border-radius);
     box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.15); }
   .litepicker .container__months .month-item-name,
   .litepicker .container__months .month-item-year {
-    font-weight: 500 !important; }
+    font-weight: var(--tblr-font-weight-medium) !important; }
   .litepicker .container__months .button-next-month,
   .litepicker .container__months .button-prev-month {
     cursor: pointer !important; }
@@ -1027,11 +1027,11 @@ image, text, .jvm-zoomin, .jvm-zoomout {
 
 .jvm-series-container .jvm-legend .jvm-legend-title {
   border-bottom: 0;
-  font-weight: 500; }
+  font-weight: var(--tblr-font-weight-medium); }
 
 .jvm-series-container .jvm-legend {
-  background-color: var(--tblr-card-bg);
-  border: 1px solid var(--tblr-border-color);
+  background-color: var(--tblr-card-bg, var(--tblr-bg-surface));
+  border: var(--tblr-border-width) solid var(--tblr-border-color);
   min-width: 8rem; }
   .jvm-series-container .jvm-legend .jvm-legend-inner .jvm-legend-tick {
     display: flex;
@@ -1041,8 +1041,8 @@ image, text, .jvm-zoomin, .jvm-zoomout {
       height: .75rem; }
 
 .jvm-zoom-btn {
-  border: 1px solid var(--tblr-border-color);
-  background: var(--tblr-card-bg);
+  border: var(--tblr-border-width) solid var(--tblr-border-color);
+  background: var(--tblr-card-bg, var(--tblr-bg-surface));
   color: var(--tblr-body-color);
   padding: 0;
   display: flex;
@@ -1089,7 +1089,7 @@ body {
   --plyr-color-main: var(--tblr-primary); }
 
 .tox-tinymce {
-  border: 1px solid var(--tblr-border-color) !important;
+  border: var(--tblr-border-width) solid var(--tblr-border-color) !important;
   border-radius: 4px !important;
   font-family: var(--tblr-font-sans-serif) !important; }
 
@@ -1097,7 +1097,7 @@ body {
   padding: 0 .5rem 0; }
 
 .tox:not(.tox-tinymce-inline) .tox-editor-header {
-  border-bottom: 1px solid var(--tblr-border-color) !important;
+  border-bottom: var(--tblr-border-width) solid var(--tblr-border-color) !important;
   box-shadow: none !important;
   padding: 0 !important; }
 
@@ -1105,4 +1105,4 @@ body {
   margin: 0 !important; }
 
 .tox-statusbar {
-  border-top: 1px solid var(--tblr-border-color) !important; }
+  border-top: var(--tblr-border-width) solid var(--tblr-border-color) !important; }
