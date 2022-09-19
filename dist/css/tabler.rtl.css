@@ -11528,7 +11528,8 @@ body:not(.theme-dark) .hide-theme-light {
 .btn-link {
   color: var(--tblr-primary);
   background-color: transparent;
-  border-color: transparent; }
+  border-color: transparent;
+  box-shadow: none; }
   .btn-link .icon {
     color: inherit; }
   .btn-link:hover {
@@ -13961,10 +13962,10 @@ Card list group
     text-decoration: none; }
 
 .icon-inline {
-  width: 1em;
-  height: 1em;
-  font-size: 1.1428571em;
-  vertical-align: -0.2em; }
+  width: 1rem;
+  height: 1rem;
+  font-size: 1rem;
+  vertical-align: -.2rem; }
 
 .icon-filled {
   fill: currentColor; }
