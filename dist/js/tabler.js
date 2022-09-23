@@ -1,6 +1,6 @@
 /*!
-* Tabler v1.0.0-beta11 (https://tabler.io)
-* @version 1.0.0-beta11
+* Tabler v1.0.0-beta12 (https://tabler.io)
+* @version 1.0.0-beta12
 * @link https://tabler.io
 * Copyright 2018-2022 The Tabler Authors
 * Copyright 2018-2022 codecalm.net Paweł Kuna
@@ -80,13 +80,13 @@
 	  if (superClass) _setPrototypeOf(subClass, superClass);
 	}
 	function _getPrototypeOf(o) {
-	  _getPrototypeOf = Object.setPrototypeOf ? Object.getPrototypeOf : function _getPrototypeOf(o) {
+	  _getPrototypeOf = Object.setPrototypeOf ? Object.getPrototypeOf.bind() : function _getPrototypeOf(o) {
 	    return o.__proto__ || Object.getPrototypeOf(o);
 	  };
 	  return _getPrototypeOf(o);
 	}
 	function _setPrototypeOf(o, p) {
-	  _setPrototypeOf = Object.setPrototypeOf || function _setPrototypeOf(o, p) {
+	  _setPrototypeOf = Object.setPrototypeOf ? Object.setPrototypeOf.bind() : function _setPrototypeOf(o, p) {
 	    o.__proto__ = p;
 	    return o;
 	  };
@@ -167,7 +167,7 @@
 	}
 	function _get() {
 	  if (typeof Reflect !== "undefined" && Reflect.get) {
-	    _get = Reflect.get;
+	    _get = Reflect.get.bind();
 	  } else {
 	    _get = function _get(target, property, receiver) {
 	      var base = _superPropBase(target, property);
@@ -222,8 +222,17 @@
 	function _slicedToArray(arr, i) {
 	  return _arrayWithHoles(arr) || _iterableToArrayLimit(arr, i) || _unsupportedIterableToArray(arr, i) || _nonIterableRest();
 	}
+	function _toConsumableArray(arr) {
+	  return _arrayWithoutHoles(arr) || _iterableToArray(arr) || _unsupportedIterableToArray(arr) || _nonIterableSpread();
+	}
+	function _arrayWithoutHoles(arr) {
+	  if (Array.isArray(arr)) return _arrayLikeToArray(arr);
+	}
 	function _arrayWithHoles(arr) {
 	  if (Array.isArray(arr)) return arr;
+	}
+	function _iterableToArray(iter) {
+	  if (typeof Symbol !== "undefined" && iter[Symbol.iterator] != null || iter["@@iterator"] != null) return Array.from(iter);
 	}
 	function _iterableToArrayLimit(arr, i) {
 	  var _i = arr == null ? null : typeof Symbol !== "undefined" && arr[Symbol.iterator] || arr["@@iterator"];
@@ -261,6 +270,9 @@
 	  if (len == null || len > arr.length) len = arr.length;
 	  for (var i = 0, arr2 = new Array(len); i < len; i++) arr2[i] = arr[i];
 	  return arr2;
+	}
+	function _nonIterableSpread() {
+	  throw new TypeError("Invalid attempt to spread non-iterable instance.\nIn order to be iterable, non-array objects must have a [Symbol.iterator]() method.");
 	}
 	function _nonIterableRest() {
 	  throw new TypeError("Invalid attempt to destructure non-iterable instance.\nIn order to be iterable, non-array objects must have a [Symbol.iterator]() method.");
@@ -662,7 +674,7 @@
 	      if (!isString(str)) throw new Error('value should be string');
 	      var details = new ChangeDetails();
 	      var checkTail = isString(tail) ? new ContinuousTailDetails(String(tail)) : tail;
-	      if (flags && flags.tail) flags._beforeTailState = this.state;
+	      if (flags !== null && flags !== void 0 && flags.tail) flags._beforeTailState = this.state;
 	      for (var ci = 0; ci < str.length; ++ci) {
 	        details.aggregate(this._appendChar(str[ci], flags, checkTail));
 	      }
@@ -737,6 +749,9 @@
 	  }, {
 	    key: "splice",
 	    value: function splice(start, deleteCount, inserted, removeDirection) {
+	      var flags = arguments.length > 4 && arguments[4] !== undefined ? arguments[4] : {
+	        input: true
+	      };
 	      var tailPos = start + deleteCount;
 	      var tail = this.extractTail(tailPos);
 	      var oldRawValue;
@@ -762,14 +777,18 @@
 	          tail.unshift();
 	        }
 	      }
-	      return details.aggregate(this.append(inserted, {
-	        input: true
-	      }, tail));
+	      return details.aggregate(this.append(inserted, flags, tail));
 	    }
 	  }, {
 	    key: "maskEquals",
 	    value: function maskEquals(mask) {
 	      return this.mask === mask;
+	    }
+	  }, {
+	    key: "typedValueEquals",
+	    value: function typedValueEquals(value) {
+	      var tval = this.typedValue;
+	      return value === tval || Masked.EMPTY_VALUES.includes(value) && Masked.EMPTY_VALUES.includes(tval) || this.doFormat(value) === this.doFormat(this.typedValue);
 	    }
 	  }]);
 	  return Masked;
@@ -782,6 +801,7 @@
 	    return v;
 	  }
 	};
+	Masked.EMPTY_VALUES = [undefined, null, ''];
 	IMask.Masked = Masked;
 
 	function maskedClass(mask) {
@@ -1036,7 +1056,7 @@
 	      var details = new ChangeDetails();
 	      if (this._value) return details;
 	      var appended = this.char === ch;
-	      var isResolved = appended && (this.isUnmasking || flags.input || flags.raw) && !this.eager && !flags.tail;
+	      var isResolved = appended && (this.isUnmasking || flags.input || flags.raw) && (!flags.raw || !this.eager) && !flags.tail;
 	      if (isResolved) details.rawInserted = this.char;
 	      this._value = details.inserted = this.char;
 	      this._isRawInput = isResolved && (flags.raw || flags.input);
@@ -1045,7 +1065,9 @@
 	  }, {
 	    key: "_appendEager",
 	    value: function _appendEager() {
-	      return this._appendChar(this.char);
+	      return this._appendChar(this.char, {
+	        tail: true
+	      });
 	    }
 	  }, {
 	    key: "_appendPlaceholder",
@@ -1614,11 +1636,11 @@
 	      var details = new ChangeDetails();
 	      if (!blockIter) return details;
 	      for (var bi = blockIter.index;; ++bi) {
-	        var _flags$_beforeTailSta;
+	        var _flags$_beforeTailSta, _flags$_beforeTailSta2;
 	        var _block = this._blocks[bi];
 	        if (!_block) break;
 	        var blockDetails = _block._appendChar(ch, Object.assign({}, flags, {
-	          _beforeTailState: (_flags$_beforeTailSta = flags._beforeTailState) === null || _flags$_beforeTailSta === void 0 ? void 0 : _flags$_beforeTailSta._blocks[bi]
+	          _beforeTailState: (_flags$_beforeTailSta = flags._beforeTailState) === null || _flags$_beforeTailSta === void 0 ? void 0 : (_flags$_beforeTailSta2 = _flags$_beforeTailSta._blocks) === null || _flags$_beforeTailSta2 === void 0 ? void 0 : _flags$_beforeTailSta2[bi]
 	        }));
 	        var skip = blockDetails.skip;
 	        details.aggregate(blockDetails);
@@ -2279,6 +2301,7 @@
 	      return this._value;
 	    },
 	    set: function set(str) {
+	      if (this.value === str) return;
 	      this.masked.value = str;
 	      this.updateControl();
 	      this.alignCursor();
@@ -2289,6 +2312,7 @@
 	      return this._unmaskedValue;
 	    },
 	    set: function set(str) {
+	      if (this.unmaskedValue === str) return;
 	      this.masked.unmaskedValue = str;
 	      this.updateControl();
 	      this.alignCursor();
@@ -2299,6 +2323,7 @@
 	      return this.masked.typedValue;
 	    },
 	    set: function set(val) {
+	      if (this.masked.typedValueEquals(val)) return;
 	      this.masked.typedValue = val;
 	      this.updateControl();
 	      this.alignCursor();
@@ -2460,7 +2485,10 @@
 	      this.el.value, this.cursorPos,
 	      this.value, this._selection);
 	      var oldRawValue = this.masked.rawInputValue;
-	      var offset = this.masked.splice(details.startChangePos, details.removed.length, details.inserted, details.removeDirection).offset;
+	      var offset = this.masked.splice(details.startChangePos, details.removed.length, details.inserted, details.removeDirection, {
+	        input: true,
+	        raw: true
+	      }).offset;
 	      var removeDirection = oldRawValue === this.masked.rawInputValue ? details.removeDirection : DIRECTION.NONE;
 	      var cursorPos = this.masked.nearestInputPos(details.startChangePos + offset, removeDirection);
 	      if (removeDirection !== DIRECTION.NONE) cursorPos = this.masked.nearestInputPos(cursorPos, DIRECTION.NONE);
@@ -2784,6 +2812,11 @@
 	    get: function get() {
 	      return this.signed || this.min != null && this.min < 0 || this.max != null && this.max < 0;
 	    }
+	  }, {
+	    key: "typedValueEquals",
+	    value: function typedValueEquals(value) {
+	      return (_get(_getPrototypeOf(MaskedNumber.prototype), "typedValueEquals", this).call(this, value) || MaskedNumber.EMPTY_VALUES.includes(value) && MaskedNumber.EMPTY_VALUES.includes(this.typedValue)) && !(value === 0 && this.value === '');
+	    }
 	  }]);
 	  return MaskedNumber;
 	}(Masked);
@@ -2796,6 +2829,7 @@
 	  normalizeZeros: true,
 	  padFractionalZeros: false
 	};
+	MaskedNumber.EMPTY_VALUES = [].concat(_toConsumableArray(Masked.EMPTY_VALUES), [0]);
 	IMask.MaskedNumber = MaskedNumber;
 
 	var MaskedFunction = function (_Masked) {
@@ -2844,7 +2878,7 @@
 	      var flags = arguments.length > 1 && arguments[1] !== undefined ? arguments[1] : {};
 	      var details = this._applyDispatch(ch, flags);
 	      if (this.currentMask) {
-	        details.aggregate(this.currentMask._appendChar(ch, flags));
+	        details.aggregate(this.currentMask._appendChar(ch, this.currentMaskFlags(flags)));
 	      }
 	      return details;
 	    }
@@ -2860,7 +2894,7 @@
 	      var tailValue = inputValue.slice(insertValue.length);
 	      var prevMask = this.currentMask;
 	      var details = new ChangeDetails();
-	      var prevMaskState = prevMask && prevMask.state;
+	      var prevMaskState = prevMask === null || prevMask === void 0 ? void 0 : prevMask.state;
 	      this.currentMask = this.doDispatch(appended, Object.assign({}, flags));
 	      if (this.currentMask) {
 	        if (this.currentMask !== prevMask) {
@@ -2902,6 +2936,14 @@
 	      return details;
 	    }
 	  }, {
+	    key: "currentMaskFlags",
+	    value: function currentMaskFlags(flags) {
+	      var _flags$_beforeTailSta, _flags$_beforeTailSta2;
+	      return Object.assign({}, flags, {
+	        _beforeTailState: ((_flags$_beforeTailSta = flags._beforeTailState) === null || _flags$_beforeTailSta === void 0 ? void 0 : _flags$_beforeTailSta.currentMaskRef) === this.currentMask && ((_flags$_beforeTailSta2 = flags._beforeTailState) === null || _flags$_beforeTailSta2 === void 0 ? void 0 : _flags$_beforeTailSta2.currentMask) || flags._beforeTailState
+	      });
+	    }
+	  }, {
 	    key: "doDispatch",
 	    value: function doDispatch(appended) {
 	      var flags = arguments.length > 1 && arguments[1] !== undefined ? arguments[1] : {};
@@ -2909,18 +2951,32 @@
 	    }
 	  }, {
 	    key: "doValidate",
-	    value: function doValidate() {
-	      var _get2, _this$currentMask;
-	      for (var _len = arguments.length, args = new Array(_len), _key = 0; _key < _len; _key++) {
-	        args[_key] = arguments[_key];
+	    value: function doValidate(flags) {
+	      return _get(_getPrototypeOf(MaskedDynamic.prototype), "doValidate", this).call(this, flags) && (!this.currentMask || this.currentMask.doValidate(this.currentMaskFlags(flags)));
+	    }
+	  }, {
+	    key: "doPrepare",
+	    value: function doPrepare(str) {
+	      var flags = arguments.length > 1 && arguments[1] !== undefined ? arguments[1] : {};
+	      var _normalizePrepare = normalizePrepare(_get(_getPrototypeOf(MaskedDynamic.prototype), "doPrepare", this).call(this, str, flags)),
+	          _normalizePrepare2 = _slicedToArray(_normalizePrepare, 2),
+	          s = _normalizePrepare2[0],
+	          details = _normalizePrepare2[1];
+	      if (this.currentMask) {
+	        var currentDetails;
+	        var _normalizePrepare3 = normalizePrepare(_get(_getPrototypeOf(MaskedDynamic.prototype), "doPrepare", this).call(this, s, this.currentMaskFlags(flags)));
+	        var _normalizePrepare4 = _slicedToArray(_normalizePrepare3, 2);
+	        s = _normalizePrepare4[0];
+	        currentDetails = _normalizePrepare4[1];
+	        details = details.aggregate(currentDetails);
 	      }
-	      return (_get2 = _get(_getPrototypeOf(MaskedDynamic.prototype), "doValidate", this)).call.apply(_get2, [this].concat(args)) && (!this.currentMask || (_this$currentMask = this.currentMask).doValidate.apply(_this$currentMask, args));
+	      return [s, details];
 	    }
 	  }, {
 	    key: "reset",
 	    value: function reset() {
-	      var _this$currentMask2;
-	      (_this$currentMask2 = this.currentMask) === null || _this$currentMask2 === void 0 ? void 0 : _this$currentMask2.reset();
+	      var _this$currentMask;
+	      (_this$currentMask = this.currentMask) === null || _this$currentMask === void 0 ? void 0 : _this$currentMask.reset();
 	      this.compiledMasks.forEach(function (m) {
 	        return m.reset();
 	      });
@@ -2958,22 +3014,22 @@
 	  }, {
 	    key: "isComplete",
 	    get: function get() {
-	      var _this$currentMask3;
-	      return Boolean((_this$currentMask3 = this.currentMask) === null || _this$currentMask3 === void 0 ? void 0 : _this$currentMask3.isComplete);
+	      var _this$currentMask2;
+	      return Boolean((_this$currentMask2 = this.currentMask) === null || _this$currentMask2 === void 0 ? void 0 : _this$currentMask2.isComplete);
 	    }
 	  }, {
 	    key: "isFilled",
 	    get: function get() {
-	      var _this$currentMask4;
-	      return Boolean((_this$currentMask4 = this.currentMask) === null || _this$currentMask4 === void 0 ? void 0 : _this$currentMask4.isFilled);
+	      var _this$currentMask3;
+	      return Boolean((_this$currentMask3 = this.currentMask) === null || _this$currentMask3 === void 0 ? void 0 : _this$currentMask3.isFilled);
 	    }
 	  }, {
 	    key: "remove",
 	    value: function remove() {
 	      var details = new ChangeDetails();
 	      if (this.currentMask) {
-	        var _this$currentMask5;
-	        details.aggregate((_this$currentMask5 = this.currentMask).remove.apply(_this$currentMask5, arguments))
+	        var _this$currentMask4;
+	        details.aggregate((_this$currentMask4 = this.currentMask).remove.apply(_this$currentMask4, arguments))
 	        .aggregate(this._applyDispatch());
 	      }
 	      return details;
@@ -2981,13 +3037,14 @@
 	  }, {
 	    key: "state",
 	    get: function get() {
+	      var _this$currentMask5;
 	      return Object.assign({}, _get(_getPrototypeOf(MaskedDynamic.prototype), "state", this), {
 	        _rawInputValue: this.rawInputValue,
 	        compiledMasks: this.compiledMasks.map(function (m) {
 	          return m.state;
 	        }),
 	        currentMaskRef: this.currentMask,
-	        currentMask: this.currentMask && this.currentMask.state
+	        currentMask: (_this$currentMask5 = this.currentMask) === null || _this$currentMask5 === void 0 ? void 0 : _this$currentMask5.state
 	      });
 	    },
 	    set: function set(state) {
@@ -3013,11 +3070,11 @@
 	  }, {
 	    key: "extractTail",
 	    value: function extractTail() {
-	      var _this$currentMask7, _get3;
-	      for (var _len2 = arguments.length, args = new Array(_len2), _key2 = 0; _key2 < _len2; _key2++) {
-	        args[_key2] = arguments[_key2];
+	      var _this$currentMask7, _get2;
+	      for (var _len = arguments.length, args = new Array(_len), _key = 0; _key < _len; _key++) {
+	        args[_key] = arguments[_key];
 	      }
-	      return this.currentMask ? (_this$currentMask7 = this.currentMask).extractTail.apply(_this$currentMask7, args) : (_get3 = _get(_getPrototypeOf(MaskedDynamic.prototype), "extractTail", this)).call.apply(_get3, [this].concat(args));
+	      return this.currentMask ? (_this$currentMask7 = this.currentMask).extractTail.apply(_this$currentMask7, args) : (_get2 = _get(_getPrototypeOf(MaskedDynamic.prototype), "extractTail", this)).call.apply(_get2, [this].concat(args));
 	    }
 	  }, {
 	    key: "doCommit",
@@ -3028,11 +3085,11 @@
 	  }, {
 	    key: "nearestInputPos",
 	    value: function nearestInputPos() {
-	      var _this$currentMask8, _get4;
-	      for (var _len3 = arguments.length, args = new Array(_len3), _key3 = 0; _key3 < _len3; _key3++) {
-	        args[_key3] = arguments[_key3];
+	      var _this$currentMask8, _get3;
+	      for (var _len2 = arguments.length, args = new Array(_len2), _key2 = 0; _key2 < _len2; _key2++) {
+	        args[_key2] = arguments[_key2];
 	      }
-	      return this.currentMask ? (_this$currentMask8 = this.currentMask).nearestInputPos.apply(_this$currentMask8, args) : (_get4 = _get(_getPrototypeOf(MaskedDynamic.prototype), "nearestInputPos", this)).call.apply(_get4, [this].concat(args));
+	      return this.currentMask ? (_this$currentMask8 = this.currentMask).nearestInputPos.apply(_this$currentMask8, args) : (_get3 = _get(_getPrototypeOf(MaskedDynamic.prototype), "nearestInputPos", this)).call.apply(_get3, [this].concat(args));
 	    }
 	  }, {
 	    key: "overwrite",
@@ -3058,6 +3115,12 @@
 	        return m.maskEquals((_mask$mi = mask[mi]) === null || _mask$mi === void 0 ? void 0 : _mask$mi.mask);
 	      });
 	    }
+	  }, {
+	    key: "typedValueEquals",
+	    value: function typedValueEquals(value) {
+	      var _this$currentMask9;
+	      return Boolean((_this$currentMask9 = this.currentMask) === null || _this$currentMask9 === void 0 ? void 0 : _this$currentMask9.typedValueEquals(value));
+	    }
 	  }]);
 	  return MaskedDynamic;
 	}(Masked);
@@ -3070,7 +3133,7 @@
 	      m.append(inputValue, {
 	        raw: true
 	      });
-	      m.append(appended, flags);
+	      m.append(appended, masked.currentMaskFlags(flags));
 	      var weight = m.rawInputValue.length;
 	      return {
 	        weight: weight,
@@ -4658,7 +4721,7 @@
 	});
 
 	/*!
-	  * Bootstrap v5.2.0 (https://getbootstrap.com/)
+	  * Bootstrap v5.2.1 (https://getbootstrap.com/)
 	  * Copyright 2011-2022 The Bootstrap Authors (https://github.com/twbs/bootstrap/graphs/contributors)
 	  * Licensed under MIT (https://github.com/twbs/bootstrap/blob/main/LICENSE)
 	  */
@@ -5189,7 +5252,7 @@
 	    }
 	  }
 	}
-	const VERSION = '5.2.0';
+	const VERSION = '5.2.1';
 	class BaseComponent extends Config {
 	  constructor(element, config) {
 	    super();
@@ -6033,7 +6096,7 @@
 	    super(element, config);
 	    this._popper = null;
 	    this._parent = this._element.parentNode;
-	    this._menu = SelectorEngine.findOne(SELECTOR_MENU, this._parent);
+	    this._menu = SelectorEngine.next(this._element, SELECTOR_MENU)[0] || SelectorEngine.prev(this._element, SELECTOR_MENU)[0];
 	    this._inNavbar = this._detectNavbar();
 	  }
 	  static get Default() {
@@ -6257,7 +6320,7 @@
 	      return;
 	    }
 	    event.preventDefault();
-	    const getToggleButton = SelectorEngine.findOne(SELECTOR_DATA_TOGGLE$3, event.delegateTarget.parentNode);
+	    const getToggleButton = this.matches(SELECTOR_DATA_TOGGLE$3) ? this : SelectorEngine.prev(this, SELECTOR_DATA_TOGGLE$3)[0] || SelectorEngine.next(this, SELECTOR_DATA_TOGGLE$3)[0];
 	    const instance = Dropdown.getOrCreateInstance(getToggleButton);
 	    if (isUpOrDownEvent) {
 	      event.stopPropagation();
@@ -6536,6 +6599,7 @@
 	const EVENT_SHOW$4 = `show${EVENT_KEY$4}`;
 	const EVENT_SHOWN$4 = `shown${EVENT_KEY$4}`;
 	const EVENT_RESIZE$1 = `resize${EVENT_KEY$4}`;
+	const EVENT_CLICK_DISMISS = `click.dismiss${EVENT_KEY$4}`;
 	const EVENT_MOUSEDOWN_DISMISS = `mousedown.dismiss${EVENT_KEY$4}`;
 	const EVENT_KEYDOWN_DISMISS$1 = `keydown.dismiss${EVENT_KEY$4}`;
 	const EVENT_CLICK_DATA_API$2 = `click${EVENT_KEY$4}${DATA_API_KEY$2}`;
@@ -6677,16 +6741,18 @@
 	      }
 	    });
 	    EventHandler.on(this._element, EVENT_MOUSEDOWN_DISMISS, event => {
-	      if (event.target !== event.currentTarget) {
-	        return;
-	      }
-	      if (this._config.backdrop === 'static') {
-	        this._triggerBackdropTransition();
-	        return;
-	      }
-	      if (this._config.backdrop) {
-	        this.hide();
-	      }
+	      EventHandler.one(this._element, EVENT_CLICK_DISMISS, event2 => {
+	        if (this._dialog.contains(event.target) || this._dialog.contains(event2.target)) {
+	          return;
+	        }
+	        if (this._config.backdrop === 'static') {
+	          this._triggerBackdropTransition();
+	          return;
+	        }
+	        if (this._config.backdrop) {
+	          this.hide();
+	        }
+	      });
 	    });
 	  }
 	  _hideModal() {
@@ -7228,7 +7294,7 @@
 	    super(element, config);
 	    this._isEnabled = true;
 	    this._timeout = 0;
-	    this._isHovered = false;
+	    this._isHovered = null;
 	    this._activeTrigger = {};
 	    this._popper = null;
 	    this._templateFactory = null;
@@ -7280,6 +7346,9 @@
 	    if (this.tip) {
 	      this.tip.remove();
 	    }
+	    if (this._config.originalTitle) {
+	      this._element.setAttribute('title', this._config.originalTitle);
+	    }
 	    this._disposePopper();
 	    super.dispose();
 	  }
@@ -7321,12 +7390,11 @@
 	      }
 	    }
 	    const complete = () => {
-	      const previousHoverState = this._isHovered;
-	      this._isHovered = false;
 	      EventHandler.trigger(this._element, this.constructor.eventName(EVENT_SHOWN$2));
-	      if (previousHoverState) {
+	      if (this._isHovered === false) {
 	        this._leave();
 	      }
+	      this._isHovered = false;
 	    };
 	    this._queueCallback(complete, this.tip, this._isAnimated());
 	  }
@@ -7348,7 +7416,7 @@
 	    this._activeTrigger[TRIGGER_CLICK] = false;
 	    this._activeTrigger[TRIGGER_FOCUS] = false;
 	    this._activeTrigger[TRIGGER_HOVER] = false;
-	    this._isHovered = false;
+	    this._isHovered = null;
 	    const complete = () => {
 	      if (this._isWithActiveTrigger()) {
 	        return;
@@ -7688,13 +7756,15 @@
 	  offset: null,
 	  rootMargin: '0px 0px -25%',
 	  smoothScroll: false,
-	  target: null
+	  target: null,
+	  threshold: [0.1, 0.5, 1]
 	};
 	const DefaultType$1 = {
 	  offset: '(number|null)',
 	  rootMargin: 'string',
 	  smoothScroll: 'boolean',
-	  target: 'element'
+	  target: 'element',
+	  threshold: 'array'
 	};
 	class ScrollSpy extends BaseComponent {
 	  constructor(element, config) {
@@ -7737,6 +7807,10 @@
 	  }
 	  _configAfterMerge(config) {
 	    config.target = getElement(config.target) || document.body;
+	    config.rootMargin = config.offset ? `${config.offset}px 0px -30%` : config.rootMargin;
+	    if (typeof config.threshold === 'string') {
+	      config.threshold = config.threshold.split(',').map(value => Number.parseFloat(value));
+	    }
 	    return config;
 	  }
 	  _maybeEnableSmoothScroll() {
@@ -7764,8 +7838,8 @@
 	  _getNewObserver() {
 	    const options = {
 	      root: this._rootElement,
-	      threshold: [0.1, 0.5, 1],
-	      rootMargin: this._getRootMargin()
+	      threshold: this._config.threshold,
+	      rootMargin: this._config.rootMargin
 	    };
 	    return new IntersectionObserver(entries => this._observerCallback(entries), options);
 	  }
@@ -7796,9 +7870,6 @@
 	        activate(entry);
 	      }
 	    }
-	  }
-	  _getRootMargin() {
-	    return this._config.offset ? `${this._config.offset}px 0px -30%` : this._config.rootMargin;
 	  }
 	  _initializeTargetsAndObservables() {
 	    this._targetLinks = new Map();
